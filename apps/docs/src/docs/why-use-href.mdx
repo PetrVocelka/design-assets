@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Why use href" />
+
+# Why `<use href>` instead of `<img>`
+
+The default render strategy is:
+
+```html
+<svg viewBox="0 0 24 24" class="text-blue-600 size-5">
+  <use href="/design-assets/icons/square.svg?v=1.0.0#asset" />
+</svg>
+```
+
+## Four reasons
+
+1. **currentColor inheritance** — CSS color from the wrapper cascades into referenced paths
+2. **No DOM duplication** — path data lives once in the browser's parsed SVG cache
+3. **No JS runtime work** — native fetch and cache
+4. **No payload duplication across prerendered pages** — critical for SSG sites
+
+`<img src="icon.svg">` cannot inherit `text-blue-600`. See the playground's currentColor comparison demo.

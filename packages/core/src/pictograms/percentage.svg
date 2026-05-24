@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect x="8" y="8" width="32" height="32" rx="16" fill="var(--da-asset-surface-strong, #dbeafe)" stroke="var(--da-asset-strong, #1d4ed8)" stroke-width="2"/>
+  <circle cx="18" cy="18" r="3.5" fill="var(--da-asset-primary-strong, #2563eb)"/>
+  <circle cx="30" cy="30" r="3.5" fill="var(--da-asset-primary-strong, #2563eb)"/>
+  <path d="M32 16 16 32" stroke="var(--da-asset-ink, #1e3a8a)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M13 40h22" stroke="var(--da-asset-subtle, #cbd5e1)" stroke-width="2" stroke-linecap="round"/>
+</svg>

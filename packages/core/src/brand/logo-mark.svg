@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect x="6" y="6" width="52" height="52" rx="14" fill="var(--da-brand-mark-background, #1e293b)"/>
+  <path d="M32 14 48 42H16L32 14Z" fill="var(--da-brand-mark-primary, #3b82f6)"/>
+  <path d="M32 26 39 38H25L32 26Z" fill="var(--da-brand-mark-foreground, #eff6ff)"/>
+</svg>

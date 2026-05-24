@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect x="5" y="7" width="38" height="34" rx="4" fill="var(--da-asset-surface, #eff6ff)" stroke="var(--da-asset-muted, #334155)" stroke-width="2"/>
+  <path d="M5 17h38" stroke="var(--da-asset-muted, #334155)" stroke-width="2"/>
+  <path d="M5 25h38M5 33h38M18 7v34M30 7v34" stroke="var(--da-asset-subtle, #cbd5e1)" stroke-width="1.5"/>
+  <rect x="8" y="19" width="7" height="4" rx="1" fill="var(--da-asset-success, #22c55e)"/>
+  <rect x="21" y="27" width="6" height="4" rx="1" fill="var(--da-asset-primary, #3b82f6)"/>
+  <rect x="33" y="35" width="7" height="3" rx="1" fill="var(--da-asset-accent, #f59e0b)"/>
+  <path d="M9 12h8" stroke="var(--da-asset-success, #22c55e)" stroke-width="2" stroke-linecap="round"/>
+</svg>

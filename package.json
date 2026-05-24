@@ -1,0 +1,26 @@
+{
+  "name": "design-assets",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint --continue",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "generate": "turbo run generate",
+    "validate": "turbo run validate",
+    "design-assets": "yarn workspace @design-assets/core design-assets"
+  },
+  "devDependencies": {
+    "@design-assets/eslint-config": "workspace:*",
+    "turbo": "^2.5.4"
+  },
+  "packageManager": "yarn@4.9.2",
+  "engines": {
+    "node": ">=20"
+  }
+}

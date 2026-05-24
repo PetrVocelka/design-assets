@@ -1,0 +1,80 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Configuration" />
+
+# Configuration
+
+`design-assets` is designed to stay small at the consumer edge. The package can publish the whole catalog, while each app copies and registers only the built-in categories it needs.
+
+## Copy only selected categories
+
+```bash
+yarn design-assets copy ./public/design-assets --categories icons,brand
+```
+
+This filters both the copied SVG folders and `manifest.json`.
+
+## Register only selected Web Components
+
+```ts
+import { configureDesignAssets, defineDesignAssetsElements } from '@design-assets/web-components/register';
+
+configureDesignAssets({ baseUrl: '/design-assets' });
+defineDesignAssetsElements({ categories: ['icons', 'brand'] });
+```
+
+## React and Angular
+
+React and Angular consumers should import only the adapters they use:
+
+```tsx
+import { Icon, BrandAsset } from '@design-assets/react';
+```
+
+```ts
+import { IconComponent, BrandAssetComponent } from '@design-assets/angular';
+```
+
+Bundlers can tree-shake unused adapter code, but public SVG availability is still controlled by the copied categories.
+
+## Sizing
+
+Adapters do not enforce width or height, and runtime packages do not depend on Tailwind. Storybook applies example classes so the catalog is readable, but each consumer app should size assets with its own CSS, design tokens, optional Tailwind utilities, or wrapper components.
+
+## Override asset hrefs
+
+Use `resolveHref` when an app wants to keep the default package catalog but route specific assets elsewhere. The most common case is product-owned flags:
+
+```tsx
+<DesignAssetsProvider
+  baseUrl="/design-assets"
+  resolveHref={({ category, name, defaultHref }) =>
+    category === 'flags' ? `/local-flags/${name}.svg#asset` : defaultHref
+  }
+>
+  <Flag countryCode="cz" ariaLabel="Czech Republic" />
+</DesignAssetsProvider>
+```
+
+The same resolver is available in `provideDesignAssets(...)` for Angular and `configureDesignAssets(...)` for Web Components.
+
+## Colored custom group themes
+
+The demo pictogram and illustration groups use semantic CSS variables with fallback colors. Consumers can set these variables on the SVG, a wrapper, or an app theme class:
+
+```css
+.asset-theme--dark {
+  --da-asset-background: #0f172a;
+  --da-asset-surface: #1e293b;
+  --da-asset-primary: #94a3b8;
+  --da-asset-strong: #3b82f6;
+  --da-asset-ink: #eff6ff;
+  --da-asset-muted: #94a3b8;
+  --da-asset-subtle: #475569;
+  --da-asset-accent: #f59e0b;
+  --da-asset-success: #22c55e;
+  --da-asset-danger: #ef4444;
+}
+```
+
+The asset files stay generic; product teams own the exact token mapping for light, dark, seasonal, or brand-specific themes.

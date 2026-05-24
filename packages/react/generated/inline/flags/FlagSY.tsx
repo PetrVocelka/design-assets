@@ -1,0 +1,17 @@
+// AUTO-GENERATED. DO NOT EDIT.
+/**
+ * Inline flags/sy component.
+ * Warning: inline SVG duplicates path markup in the DOM on every render.
+ * Prefer external-file components for icons used many times on one page.
+ */
+import { syFlagInline } from '@design-assets/core/generated/inline/flags/sy.js';
+import { renderInline } from '../../../src/inline/render-inline.js';
+import type { AccessibleProps } from '../../../src/external-svg.js';
+
+export type FlagSYProps = AccessibleProps & {
+  className?: string;
+};
+
+export function FlagSY({ className, ...a11y }: FlagSYProps) {
+  return renderInline({ spec: syFlagInline, className, ...a11y });
+}

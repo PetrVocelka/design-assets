@@ -1,0 +1,78 @@
+import type {
+  AssetCategory,
+  BrandAssetName,
+  CountryCode,
+  IconName,
+  IllustrationName,
+  PictogramName,
+} from '../generated/names.js';
+
+const DEFAULT_BASE_URL = '/design-assets';
+
+export interface AssetHrefResolverContext {
+  category: AssetCategory;
+  name: string;
+  baseUrl: string;
+  versionTag: string | null | undefined;
+  defaultHref: string;
+}
+
+export type AssetHrefResolver = (context: AssetHrefResolverContext) => string;
+
+export function buildAssetHref(
+  baseUrl: string,
+  category: string,
+  name: string,
+  versionTag?: string | null,
+): string {
+  const path = `${baseUrl}/${category}/${name}.svg`;
+  const withVersion = versionTag ? `${path}?v=${versionTag}` : path;
+  return `${withVersion}#asset`;
+}
+
+export function resolveAssetHref(
+  context: AssetHrefResolverContext,
+  resolver?: AssetHrefResolver,
+): string {
+  return resolver ? resolver(context) : context.defaultHref;
+}
+
+export function getIconHref(
+  name: IconName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetHref(baseUrl, 'icons', name, versionTag);
+}
+
+export function getPictogramHref(
+  name: PictogramName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetHref(baseUrl, 'pictograms', name, versionTag);
+}
+
+export function getIllustrationHref(
+  name: IllustrationName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetHref(baseUrl, 'illustrations', name, versionTag);
+}
+
+export function getBrandAssetHref(
+  name: BrandAssetName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetHref(baseUrl, 'brand', name, versionTag);
+}
+
+export function getFlagHref(
+  countryCode: CountryCode,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetHref(baseUrl, 'flags', countryCode, versionTag);
+}

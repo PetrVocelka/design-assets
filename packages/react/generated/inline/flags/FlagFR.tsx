@@ -1,0 +1,17 @@
+// AUTO-GENERATED. DO NOT EDIT.
+/**
+ * Inline flags/fr component.
+ * Warning: inline SVG duplicates path markup in the DOM on every render.
+ * Prefer external-file components for icons used many times on one page.
+ */
+import { frFlagInline } from '@design-assets/core/generated/inline/flags/fr.js';
+import { renderInline } from '../../../src/inline/render-inline.js';
+import type { AccessibleProps } from '../../../src/external-svg.js';
+
+export type FlagFRProps = AccessibleProps & {
+  className?: string;
+};
+
+export function FlagFR({ className, ...a11y }: FlagFRProps) {
+  return renderInline({ spec: frFlagInline, className, ...a11y });
+}

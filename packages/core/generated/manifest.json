@@ -1,0 +1,2597 @@
+[
+  {
+    "name": "logo-mark",
+    "category": "brand",
+    "viewBox": "0 0 64 64",
+    "colorMode": "colored",
+    "id": "brand/logo-mark"
+  },
+  {
+    "name": "ad",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ad.svg",
+    "id": "flags/ad"
+  },
+  {
+    "name": "ae",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ae.svg",
+    "id": "flags/ae"
+  },
+  {
+    "name": "af",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/af.svg",
+    "id": "flags/af"
+  },
+  {
+    "name": "ag",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ag.svg",
+    "id": "flags/ag"
+  },
+  {
+    "name": "ai",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ai.svg",
+    "id": "flags/ai"
+  },
+  {
+    "name": "al",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/al.svg",
+    "id": "flags/al"
+  },
+  {
+    "name": "am",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/am.svg",
+    "id": "flags/am"
+  },
+  {
+    "name": "ao",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ao.svg",
+    "id": "flags/ao"
+  },
+  {
+    "name": "aq",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/aq.svg",
+    "id": "flags/aq"
+  },
+  {
+    "name": "ar",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ar.svg",
+    "id": "flags/ar"
+  },
+  {
+    "name": "as",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/as.svg",
+    "id": "flags/as"
+  },
+  {
+    "name": "at",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/at.svg",
+    "id": "flags/at"
+  },
+  {
+    "name": "au",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/au.svg",
+    "id": "flags/au"
+  },
+  {
+    "name": "aw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/aw.svg",
+    "id": "flags/aw"
+  },
+  {
+    "name": "ax",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ax.svg",
+    "id": "flags/ax"
+  },
+  {
+    "name": "az",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/az.svg",
+    "id": "flags/az"
+  },
+  {
+    "name": "ba",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ba.svg",
+    "id": "flags/ba"
+  },
+  {
+    "name": "bb",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bb.svg",
+    "id": "flags/bb"
+  },
+  {
+    "name": "bd",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bd.svg",
+    "id": "flags/bd"
+  },
+  {
+    "name": "be",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/be.svg",
+    "id": "flags/be"
+  },
+  {
+    "name": "bf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bf.svg",
+    "id": "flags/bf"
+  },
+  {
+    "name": "bg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bg.svg",
+    "id": "flags/bg"
+  },
+  {
+    "name": "bh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bh.svg",
+    "id": "flags/bh"
+  },
+  {
+    "name": "bi",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bi.svg",
+    "id": "flags/bi"
+  },
+  {
+    "name": "bj",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bj.svg",
+    "id": "flags/bj"
+  },
+  {
+    "name": "bl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bl.svg",
+    "id": "flags/bl"
+  },
+  {
+    "name": "bm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bm.svg",
+    "id": "flags/bm"
+  },
+  {
+    "name": "bn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bn.svg",
+    "id": "flags/bn"
+  },
+  {
+    "name": "bo",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bo.svg",
+    "id": "flags/bo"
+  },
+  {
+    "name": "bq",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bq.svg",
+    "id": "flags/bq"
+  },
+  {
+    "name": "br",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/br.svg",
+    "id": "flags/br"
+  },
+  {
+    "name": "bs",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bs.svg",
+    "id": "flags/bs"
+  },
+  {
+    "name": "bt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bt.svg",
+    "id": "flags/bt"
+  },
+  {
+    "name": "bv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bv.svg",
+    "id": "flags/bv"
+  },
+  {
+    "name": "bw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bw.svg",
+    "id": "flags/bw"
+  },
+  {
+    "name": "by",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/by.svg",
+    "id": "flags/by"
+  },
+  {
+    "name": "bz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/bz.svg",
+    "id": "flags/bz"
+  },
+  {
+    "name": "ca",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ca.svg",
+    "id": "flags/ca"
+  },
+  {
+    "name": "cc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cc.svg",
+    "id": "flags/cc"
+  },
+  {
+    "name": "cd",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cd.svg",
+    "id": "flags/cd"
+  },
+  {
+    "name": "cf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cf.svg",
+    "id": "flags/cf"
+  },
+  {
+    "name": "cg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cg.svg",
+    "id": "flags/cg"
+  },
+  {
+    "name": "ch",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ch.svg",
+    "id": "flags/ch"
+  },
+  {
+    "name": "ci",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ci.svg",
+    "id": "flags/ci"
+  },
+  {
+    "name": "ck",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ck.svg",
+    "id": "flags/ck"
+  },
+  {
+    "name": "cl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cl.svg",
+    "id": "flags/cl"
+  },
+  {
+    "name": "cm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cm.svg",
+    "id": "flags/cm"
+  },
+  {
+    "name": "cn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cn.svg",
+    "id": "flags/cn"
+  },
+  {
+    "name": "co",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/co.svg",
+    "id": "flags/co"
+  },
+  {
+    "name": "cr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cr.svg",
+    "id": "flags/cr"
+  },
+  {
+    "name": "cu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cu.svg",
+    "id": "flags/cu"
+  },
+  {
+    "name": "cv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cv.svg",
+    "id": "flags/cv"
+  },
+  {
+    "name": "cw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cw.svg",
+    "id": "flags/cw"
+  },
+  {
+    "name": "cx",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cx.svg",
+    "id": "flags/cx"
+  },
+  {
+    "name": "cy",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cy.svg",
+    "id": "flags/cy"
+  },
+  {
+    "name": "cz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/cz.svg",
+    "id": "flags/cz"
+  },
+  {
+    "name": "de",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/de.svg",
+    "id": "flags/de"
+  },
+  {
+    "name": "dj",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/dj.svg",
+    "id": "flags/dj"
+  },
+  {
+    "name": "dk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/dk.svg",
+    "id": "flags/dk"
+  },
+  {
+    "name": "dm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/dm.svg",
+    "id": "flags/dm"
+  },
+  {
+    "name": "do",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/do.svg",
+    "id": "flags/do"
+  },
+  {
+    "name": "dz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/dz.svg",
+    "id": "flags/dz"
+  },
+  {
+    "name": "ec",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ec.svg",
+    "id": "flags/ec"
+  },
+  {
+    "name": "ee",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ee.svg",
+    "id": "flags/ee"
+  },
+  {
+    "name": "eg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/eg.svg",
+    "id": "flags/eg"
+  },
+  {
+    "name": "eh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/eh.svg",
+    "id": "flags/eh"
+  },
+  {
+    "name": "er",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/er.svg",
+    "id": "flags/er"
+  },
+  {
+    "name": "es",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/es.svg",
+    "id": "flags/es"
+  },
+  {
+    "name": "et",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/et.svg",
+    "id": "flags/et"
+  },
+  {
+    "name": "fi",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fi.svg",
+    "id": "flags/fi"
+  },
+  {
+    "name": "fj",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fj.svg",
+    "id": "flags/fj"
+  },
+  {
+    "name": "fk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fk.svg",
+    "id": "flags/fk"
+  },
+  {
+    "name": "fm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fm.svg",
+    "id": "flags/fm"
+  },
+  {
+    "name": "fo",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fo.svg",
+    "id": "flags/fo"
+  },
+  {
+    "name": "fr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/fr.svg",
+    "id": "flags/fr"
+  },
+  {
+    "name": "ga",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ga.svg",
+    "id": "flags/ga"
+  },
+  {
+    "name": "gb",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gb.svg",
+    "id": "flags/gb"
+  },
+  {
+    "name": "gd",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gd.svg",
+    "id": "flags/gd"
+  },
+  {
+    "name": "ge",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ge.svg",
+    "id": "flags/ge"
+  },
+  {
+    "name": "gf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gf.svg",
+    "id": "flags/gf"
+  },
+  {
+    "name": "gg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gg.svg",
+    "id": "flags/gg"
+  },
+  {
+    "name": "gh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gh.svg",
+    "id": "flags/gh"
+  },
+  {
+    "name": "gi",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gi.svg",
+    "id": "flags/gi"
+  },
+  {
+    "name": "gl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gl.svg",
+    "id": "flags/gl"
+  },
+  {
+    "name": "gm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gm.svg",
+    "id": "flags/gm"
+  },
+  {
+    "name": "gn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gn.svg",
+    "id": "flags/gn"
+  },
+  {
+    "name": "gp",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gp.svg",
+    "id": "flags/gp"
+  },
+  {
+    "name": "gq",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gq.svg",
+    "id": "flags/gq"
+  },
+  {
+    "name": "gr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gr.svg",
+    "id": "flags/gr"
+  },
+  {
+    "name": "gs",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gs.svg",
+    "id": "flags/gs"
+  },
+  {
+    "name": "gt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gt.svg",
+    "id": "flags/gt"
+  },
+  {
+    "name": "gu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gu.svg",
+    "id": "flags/gu"
+  },
+  {
+    "name": "gw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gw.svg",
+    "id": "flags/gw"
+  },
+  {
+    "name": "gy",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/gy.svg",
+    "id": "flags/gy"
+  },
+  {
+    "name": "hk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/hk.svg",
+    "id": "flags/hk"
+  },
+  {
+    "name": "hm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/hm.svg",
+    "id": "flags/hm"
+  },
+  {
+    "name": "hn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/hn.svg",
+    "id": "flags/hn"
+  },
+  {
+    "name": "hr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/hr.svg",
+    "id": "flags/hr"
+  },
+  {
+    "name": "ht",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ht.svg",
+    "id": "flags/ht"
+  },
+  {
+    "name": "hu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/hu.svg",
+    "id": "flags/hu"
+  },
+  {
+    "name": "id",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/id.svg",
+    "id": "flags/id"
+  },
+  {
+    "name": "ie",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ie.svg",
+    "id": "flags/ie"
+  },
+  {
+    "name": "il",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/il.svg",
+    "id": "flags/il"
+  },
+  {
+    "name": "im",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/im.svg",
+    "id": "flags/im"
+  },
+  {
+    "name": "in",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/in.svg",
+    "id": "flags/in"
+  },
+  {
+    "name": "io",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/io.svg",
+    "id": "flags/io"
+  },
+  {
+    "name": "iq",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/iq.svg",
+    "id": "flags/iq"
+  },
+  {
+    "name": "ir",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ir.svg",
+    "id": "flags/ir"
+  },
+  {
+    "name": "is",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/is.svg",
+    "id": "flags/is"
+  },
+  {
+    "name": "it",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/it.svg",
+    "id": "flags/it"
+  },
+  {
+    "name": "je",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/je.svg",
+    "id": "flags/je"
+  },
+  {
+    "name": "jm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/jm.svg",
+    "id": "flags/jm"
+  },
+  {
+    "name": "jo",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/jo.svg",
+    "id": "flags/jo"
+  },
+  {
+    "name": "jp",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/jp.svg",
+    "id": "flags/jp"
+  },
+  {
+    "name": "ke",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ke.svg",
+    "id": "flags/ke"
+  },
+  {
+    "name": "kg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kg.svg",
+    "id": "flags/kg"
+  },
+  {
+    "name": "kh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kh.svg",
+    "id": "flags/kh"
+  },
+  {
+    "name": "ki",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ki.svg",
+    "id": "flags/ki"
+  },
+  {
+    "name": "km",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/km.svg",
+    "id": "flags/km"
+  },
+  {
+    "name": "kn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kn.svg",
+    "id": "flags/kn"
+  },
+  {
+    "name": "kp",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kp.svg",
+    "id": "flags/kp"
+  },
+  {
+    "name": "kr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kr.svg",
+    "id": "flags/kr"
+  },
+  {
+    "name": "kw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kw.svg",
+    "id": "flags/kw"
+  },
+  {
+    "name": "ky",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ky.svg",
+    "id": "flags/ky"
+  },
+  {
+    "name": "kz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/kz.svg",
+    "id": "flags/kz"
+  },
+  {
+    "name": "la",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/la.svg",
+    "id": "flags/la"
+  },
+  {
+    "name": "lb",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lb.svg",
+    "id": "flags/lb"
+  },
+  {
+    "name": "lc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lc.svg",
+    "id": "flags/lc"
+  },
+  {
+    "name": "li",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/li.svg",
+    "id": "flags/li"
+  },
+  {
+    "name": "lk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lk.svg",
+    "id": "flags/lk"
+  },
+  {
+    "name": "lr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lr.svg",
+    "id": "flags/lr"
+  },
+  {
+    "name": "ls",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ls.svg",
+    "id": "flags/ls"
+  },
+  {
+    "name": "lt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lt.svg",
+    "id": "flags/lt"
+  },
+  {
+    "name": "lu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lu.svg",
+    "id": "flags/lu"
+  },
+  {
+    "name": "lv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/lv.svg",
+    "id": "flags/lv"
+  },
+  {
+    "name": "ly",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ly.svg",
+    "id": "flags/ly"
+  },
+  {
+    "name": "ma",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ma.svg",
+    "id": "flags/ma"
+  },
+  {
+    "name": "mc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mc.svg",
+    "id": "flags/mc"
+  },
+  {
+    "name": "md",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/md.svg",
+    "id": "flags/md"
+  },
+  {
+    "name": "me",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/me.svg",
+    "id": "flags/me"
+  },
+  {
+    "name": "mf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mf.svg",
+    "id": "flags/mf"
+  },
+  {
+    "name": "mg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mg.svg",
+    "id": "flags/mg"
+  },
+  {
+    "name": "mh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mh.svg",
+    "id": "flags/mh"
+  },
+  {
+    "name": "mk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mk.svg",
+    "id": "flags/mk"
+  },
+  {
+    "name": "ml",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ml.svg",
+    "id": "flags/ml"
+  },
+  {
+    "name": "mm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mm.svg",
+    "id": "flags/mm"
+  },
+  {
+    "name": "mn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mn.svg",
+    "id": "flags/mn"
+  },
+  {
+    "name": "mo",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mo.svg",
+    "id": "flags/mo"
+  },
+  {
+    "name": "mp",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mp.svg",
+    "id": "flags/mp"
+  },
+  {
+    "name": "mq",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mq.svg",
+    "id": "flags/mq"
+  },
+  {
+    "name": "mr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mr.svg",
+    "id": "flags/mr"
+  },
+  {
+    "name": "ms",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ms.svg",
+    "id": "flags/ms"
+  },
+  {
+    "name": "mt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mt.svg",
+    "id": "flags/mt"
+  },
+  {
+    "name": "mu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mu.svg",
+    "id": "flags/mu"
+  },
+  {
+    "name": "mv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mv.svg",
+    "id": "flags/mv"
+  },
+  {
+    "name": "mw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mw.svg",
+    "id": "flags/mw"
+  },
+  {
+    "name": "mx",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mx.svg",
+    "id": "flags/mx"
+  },
+  {
+    "name": "my",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/my.svg",
+    "id": "flags/my"
+  },
+  {
+    "name": "mz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/mz.svg",
+    "id": "flags/mz"
+  },
+  {
+    "name": "na",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/na.svg",
+    "id": "flags/na"
+  },
+  {
+    "name": "nc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nc.svg",
+    "id": "flags/nc"
+  },
+  {
+    "name": "ne",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ne.svg",
+    "id": "flags/ne"
+  },
+  {
+    "name": "nf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nf.svg",
+    "id": "flags/nf"
+  },
+  {
+    "name": "ng",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ng.svg",
+    "id": "flags/ng"
+  },
+  {
+    "name": "ni",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ni.svg",
+    "id": "flags/ni"
+  },
+  {
+    "name": "nl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nl.svg",
+    "id": "flags/nl"
+  },
+  {
+    "name": "no",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/no.svg",
+    "id": "flags/no"
+  },
+  {
+    "name": "np",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/np.svg",
+    "id": "flags/np"
+  },
+  {
+    "name": "nr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nr.svg",
+    "id": "flags/nr"
+  },
+  {
+    "name": "nu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nu.svg",
+    "id": "flags/nu"
+  },
+  {
+    "name": "nz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/nz.svg",
+    "id": "flags/nz"
+  },
+  {
+    "name": "om",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/om.svg",
+    "id": "flags/om"
+  },
+  {
+    "name": "pa",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pa.svg",
+    "id": "flags/pa"
+  },
+  {
+    "name": "pe",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pe.svg",
+    "id": "flags/pe"
+  },
+  {
+    "name": "pf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pf.svg",
+    "id": "flags/pf"
+  },
+  {
+    "name": "pg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pg.svg",
+    "id": "flags/pg"
+  },
+  {
+    "name": "ph",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ph.svg",
+    "id": "flags/ph"
+  },
+  {
+    "name": "pk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pk.svg",
+    "id": "flags/pk"
+  },
+  {
+    "name": "pl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pl.svg",
+    "id": "flags/pl"
+  },
+  {
+    "name": "pm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pm.svg",
+    "id": "flags/pm"
+  },
+  {
+    "name": "pn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pn.svg",
+    "id": "flags/pn"
+  },
+  {
+    "name": "pr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pr.svg",
+    "id": "flags/pr"
+  },
+  {
+    "name": "ps",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ps.svg",
+    "id": "flags/ps"
+  },
+  {
+    "name": "pt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pt.svg",
+    "id": "flags/pt"
+  },
+  {
+    "name": "pw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/pw.svg",
+    "id": "flags/pw"
+  },
+  {
+    "name": "py",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/py.svg",
+    "id": "flags/py"
+  },
+  {
+    "name": "qa",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/qa.svg",
+    "id": "flags/qa"
+  },
+  {
+    "name": "re",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/re.svg",
+    "id": "flags/re"
+  },
+  {
+    "name": "ro",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ro.svg",
+    "id": "flags/ro"
+  },
+  {
+    "name": "rs",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/rs.svg",
+    "id": "flags/rs"
+  },
+  {
+    "name": "ru",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ru.svg",
+    "id": "flags/ru"
+  },
+  {
+    "name": "rw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/rw.svg",
+    "id": "flags/rw"
+  },
+  {
+    "name": "sa",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sa.svg",
+    "id": "flags/sa"
+  },
+  {
+    "name": "sb",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sb.svg",
+    "id": "flags/sb"
+  },
+  {
+    "name": "sc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sc.svg",
+    "id": "flags/sc"
+  },
+  {
+    "name": "sd",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sd.svg",
+    "id": "flags/sd"
+  },
+  {
+    "name": "se",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/se.svg",
+    "id": "flags/se"
+  },
+  {
+    "name": "sg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sg.svg",
+    "id": "flags/sg"
+  },
+  {
+    "name": "sh",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sh.svg",
+    "id": "flags/sh"
+  },
+  {
+    "name": "si",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/si.svg",
+    "id": "flags/si"
+  },
+  {
+    "name": "sj",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sj.svg",
+    "id": "flags/sj"
+  },
+  {
+    "name": "sk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sk.svg",
+    "id": "flags/sk"
+  },
+  {
+    "name": "sl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sl.svg",
+    "id": "flags/sl"
+  },
+  {
+    "name": "sm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sm.svg",
+    "id": "flags/sm"
+  },
+  {
+    "name": "sn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sn.svg",
+    "id": "flags/sn"
+  },
+  {
+    "name": "so",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/so.svg",
+    "id": "flags/so"
+  },
+  {
+    "name": "sr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sr.svg",
+    "id": "flags/sr"
+  },
+  {
+    "name": "ss",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ss.svg",
+    "id": "flags/ss"
+  },
+  {
+    "name": "st",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/st.svg",
+    "id": "flags/st"
+  },
+  {
+    "name": "sv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sv.svg",
+    "id": "flags/sv"
+  },
+  {
+    "name": "sx",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sx.svg",
+    "id": "flags/sx"
+  },
+  {
+    "name": "sy",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sy.svg",
+    "id": "flags/sy"
+  },
+  {
+    "name": "sz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/sz.svg",
+    "id": "flags/sz"
+  },
+  {
+    "name": "tc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tc.svg",
+    "id": "flags/tc"
+  },
+  {
+    "name": "td",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/td.svg",
+    "id": "flags/td"
+  },
+  {
+    "name": "tf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tf.svg",
+    "id": "flags/tf"
+  },
+  {
+    "name": "tg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tg.svg",
+    "id": "flags/tg"
+  },
+  {
+    "name": "th",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/th.svg",
+    "id": "flags/th"
+  },
+  {
+    "name": "tj",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tj.svg",
+    "id": "flags/tj"
+  },
+  {
+    "name": "tk",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tk.svg",
+    "id": "flags/tk"
+  },
+  {
+    "name": "tl",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tl.svg",
+    "id": "flags/tl"
+  },
+  {
+    "name": "tm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tm.svg",
+    "id": "flags/tm"
+  },
+  {
+    "name": "tn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tn.svg",
+    "id": "flags/tn"
+  },
+  {
+    "name": "to",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/to.svg",
+    "id": "flags/to"
+  },
+  {
+    "name": "tr",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tr.svg",
+    "id": "flags/tr"
+  },
+  {
+    "name": "tt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tt.svg",
+    "id": "flags/tt"
+  },
+  {
+    "name": "tv",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tv.svg",
+    "id": "flags/tv"
+  },
+  {
+    "name": "tw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tw.svg",
+    "id": "flags/tw"
+  },
+  {
+    "name": "tz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/tz.svg",
+    "id": "flags/tz"
+  },
+  {
+    "name": "ua",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ua.svg",
+    "id": "flags/ua"
+  },
+  {
+    "name": "ug",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ug.svg",
+    "id": "flags/ug"
+  },
+  {
+    "name": "um",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/um.svg",
+    "id": "flags/um"
+  },
+  {
+    "name": "us",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/us.svg",
+    "id": "flags/us"
+  },
+  {
+    "name": "uy",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/uy.svg",
+    "id": "flags/uy"
+  },
+  {
+    "name": "uz",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/uz.svg",
+    "id": "flags/uz"
+  },
+  {
+    "name": "va",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/va.svg",
+    "id": "flags/va"
+  },
+  {
+    "name": "vc",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/vc.svg",
+    "id": "flags/vc"
+  },
+  {
+    "name": "ve",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ve.svg",
+    "id": "flags/ve"
+  },
+  {
+    "name": "vg",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/vg.svg",
+    "id": "flags/vg"
+  },
+  {
+    "name": "vi",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/vi.svg",
+    "id": "flags/vi"
+  },
+  {
+    "name": "vn",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/vn.svg",
+    "id": "flags/vn"
+  },
+  {
+    "name": "vu",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/vu.svg",
+    "id": "flags/vu"
+  },
+  {
+    "name": "wf",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/wf.svg",
+    "id": "flags/wf"
+  },
+  {
+    "name": "ws",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ws.svg",
+    "id": "flags/ws"
+  },
+  {
+    "name": "ye",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/ye.svg",
+    "id": "flags/ye"
+  },
+  {
+    "name": "yt",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "monochrome",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/yt.svg",
+    "id": "flags/yt"
+  },
+  {
+    "name": "za",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/za.svg",
+    "id": "flags/za"
+  },
+  {
+    "name": "zm",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/zm.svg",
+    "id": "flags/zm"
+  },
+  {
+    "name": "zw",
+    "category": "flags",
+    "viewBox": "0 0 640 480",
+    "colorMode": "colored",
+    "sourcePackage": "flag-icons",
+    "sourceVersion": "7.5.0",
+    "sourcePath": "flags/4x3/zw.svg",
+    "id": "flags/zw"
+  },
+  {
+    "name": "arrow-right",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/arrow-right"
+  },
+  {
+    "name": "circle",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/circle"
+  },
+  {
+    "name": "diamond",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/diamond"
+  },
+  {
+    "name": "plus",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/plus"
+  },
+  {
+    "name": "square",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/square"
+  },
+  {
+    "name": "triangle",
+    "category": "icons",
+    "viewBox": "0 0 24 24",
+    "colorMode": "monochrome",
+    "id": "icons/triangle"
+  },
+  {
+    "name": "empty-state",
+    "category": "illustrations",
+    "viewBox": "0 0 240 160",
+    "colorMode": "colored",
+    "id": "illustrations/empty-state"
+  },
+  {
+    "name": "offline",
+    "category": "illustrations",
+    "viewBox": "0 0 240 160",
+    "colorMode": "colored",
+    "id": "illustrations/offline"
+  },
+  {
+    "name": "excel-table",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "colored",
+    "id": "pictograms/excel-table"
+  },
+  {
+    "name": "grade-chart",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "monochrome",
+    "id": "pictograms/grade-chart"
+  },
+  {
+    "name": "percentage",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "colored",
+    "id": "pictograms/percentage"
+  },
+  {
+    "name": "scholarship",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "colored",
+    "id": "pictograms/scholarship"
+  },
+  {
+    "name": "school",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "colored",
+    "id": "pictograms/school"
+  },
+  {
+    "name": "weighted-average",
+    "category": "pictograms",
+    "viewBox": "0 0 48 48",
+    "colorMode": "colored",
+    "id": "pictograms/weighted-average"
+  }
+]

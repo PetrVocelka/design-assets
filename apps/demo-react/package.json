@@ -1,0 +1,39 @@
+{
+  "name": "@design-assets/demo-react",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "yarn copy:assets",
+    "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/demo-react/public/design-assets",
+    "dev": "yarn copy:assets && vite",
+    "prebuild": "yarn copy:assets",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pretest:e2e": "yarn copy:assets && yarn build",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "@design-assets/core": "workspace:*",
+    "@design-assets/react": "workspace:*",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@design-assets/eslint-config": "workspace:*",
+    "@design-assets/tailwind-preset": "workspace:*",
+    "@design-assets/typescript-config": "workspace:*",
+    "@playwright/test": "^1.52.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.28.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

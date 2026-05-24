@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect x="6" y="8" width="36" height="34" rx="4" fill="var(--da-asset-surface, #eff6ff)" stroke="var(--da-asset-strong, #1d4ed8)" stroke-width="2"/>
+  <path d="M12 34h24" stroke="var(--da-asset-subtle, #cbd5e1)" stroke-width="2" stroke-linecap="round"/>
+  <rect x="13" y="27" width="5" height="7" rx="1.5" fill="var(--da-asset-primary, #3b82f6)"/>
+  <rect x="22" y="21" width="5" height="13" rx="1.5" fill="var(--da-asset-primary-strong, #2563eb)"/>
+  <rect x="31" y="15" width="5" height="19" rx="1.5" fill="var(--da-asset-strong, #1d4ed8)"/>
+  <path d="m13 22 9-6 7 4 7-8" stroke="var(--da-asset-success, #22c55e)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

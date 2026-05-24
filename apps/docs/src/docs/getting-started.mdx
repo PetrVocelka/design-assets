@@ -1,0 +1,36 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Getting Started" />
+
+# Getting started
+
+Install `@design-assets/core` and `@design-assets/react`, then copy assets into your app's `public/` directory:
+
+```bash
+yarn design-assets copy ./public/design-assets
+```
+
+Wrap your app:
+
+```tsx
+import { DesignAssetsProvider, Icon } from '@design-assets/react';
+
+<DesignAssetsProvider baseUrl="/design-assets">
+  <Icon name="square" ariaLabel="Example shape" />
+</DesignAssetsProvider>
+```
+
+Adapters do not enforce a rendered size. Use your product CSS, Tailwind utilities, or a wrapper:
+
+```tsx
+<Icon name="square" ariaLabel="Example shape" className="app-icon app-icon--md" />
+<Icon name="square" ariaLabel="Example shape" className="size-5" />
+```
+
+For ATF assets such as the logo mark or primary navigation icons, use the inline entrypoint:
+
+```tsx
+import { LogoMark } from '@design-assets/react/inline';
+```
+
+See **Guides/Inline vs External** for when to use each approach.

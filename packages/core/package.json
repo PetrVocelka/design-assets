@@ -1,0 +1,56 @@
+{
+  "name": "@design-assets/core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic enterprise design assets: generator, manifest, per-icon SVG files, and copy CLI.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "bin": {
+    "design-assets": "./dist/bin/copy.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./manifest": {
+      "types": "./dist/manifest.d.ts",
+      "import": "./dist/manifest.js"
+    },
+    "./version": {
+      "types": "./dist/version.d.ts",
+      "import": "./dist/version.js"
+    },
+    "./svg/*": "./generated/svg/*",
+    "./generated/inline/*.js": {
+      "types": "./dist/generated/inline/*.d.ts",
+      "import": "./dist/generated/inline/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "generated/svg",
+    "generated/manifest.json"
+  ],
+  "scripts": {
+    "generate": "tsx scripts/generate.ts",
+    "validate": "tsx scripts/validate.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src scripts bin --ext .ts",
+    "design-assets": "tsx bin/copy.ts"
+  },
+  "devDependencies": {
+    "@design-assets/eslint-config": "workspace:*",
+    "@design-assets/typescript-config": "workspace:*",
+    "@types/node": "^22.15.29",
+    "eslint": "^9.28.0",
+    "flag-icons": "^7.3.2",
+    "svgo": "^3.3.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
+  }
+}

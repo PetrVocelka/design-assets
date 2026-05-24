@@ -1,0 +1,59 @@
+{
+  "name": "@design-assets/angular",
+  "version": "0.1.0",
+  "description": "Angular wrappers for enterprise design assets: external-file and inline entrypoints.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "generated"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/fesm2022/design-assets-angular.mjs"
+    },
+    "./inline": {
+      "types": "./generated/inline/index.ts",
+      "default": "./generated/inline/index.ts"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    }
+  },
+  "scripts": {
+    "generate": "tsx scripts/generate-inline-components.ts",
+    "build": "yarn generate && ng-packagr -p ng-package.json -c tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.lib.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=19",
+    "@angular/core": ">=19",
+    "@design-assets/core": "workspace:*",
+    "rxjs": "^7.8.0"
+  },
+  "dependencies": {
+    "@design-assets/core": "workspace:*",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@angular/common": "^19.2.0",
+    "@angular/compiler": "^19.2.0",
+    "@angular/compiler-cli": "^19.2.0",
+    "@angular/core": "^19.2.0",
+    "@angular/platform-browser": "^19.2.0",
+    "@design-assets/eslint-config": "workspace:*",
+    "@design-assets/typescript-config": "workspace:*",
+    "eslint": "^9.28.0",
+    "jsdom": "^26.1.0",
+    "ng-packagr": "^19.2.0",
+    "rxjs": "^7.8.2",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3",
+    "vitest": "^3.2.1",
+    "zone.js": "^0.15.0"
+  }
+}

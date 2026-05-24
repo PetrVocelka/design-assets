@@ -1,0 +1,12 @@
+{
+  "name": "@design-assets/tailwind-preset",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": "./index.ts",
+    "./icon-sizes": "./icon-sizes.ts"
+  },
+  "main": "index.ts",
+  "types": "index.ts"
+}

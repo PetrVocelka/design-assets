@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - run: corepack enable
+      - run: yarn install --immutable
+
+      - run: yarn generate
+      - run: |
+          git diff --exit-code packages/core/generated packages/react/generated packages/angular/generated \
+            || (echo "Generated files are stale. Run yarn generate." && exit 1)
+
+      - run: yarn validate
+      - run: yarn typecheck
+      - run: yarn test
+
+      - name: Install Playwright browsers
+        run: yarn workspace @design-assets/demo-react exec playwright install chromium webkit
+
+      - run: yarn test:e2e
+      - run: yarn build

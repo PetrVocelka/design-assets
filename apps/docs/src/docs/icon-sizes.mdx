@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+import { Icon } from '@design-assets/react';
+import { ICON_SIZE_PRESETS } from '@design-assets/tailwind-preset/icon-sizes';
+
+<Meta title="Docs/Icon Sizes" />
+
+# Asset sizing (consumer-owned)
+
+Assets have **no intrinsic package-owned pixel size**. Each SVG exposes a `viewBox`; rendered size is always controlled by **your** CSS (`class`, product styles, or a team wrapper component).
+
+This page shows an **example scale** for documentation and Storybook controls. It is **not** enforced by `@design-assets/core` or any adapter. Every team should define sizing in its own design rules.
+
+## Example scale (xs → xl)
+
+<div className="flex flex-wrap items-end gap-8 rounded-xl border p-8">
+  {['xs', 'sm', 'md', 'lg', 'xl'].map((preset) => {
+    const config = ICON_SIZE_PRESETS[preset];
+    return (
+      <div key={preset} className="flex flex-col items-center gap-2">
+        <Icon name="square" className={config.className} />
+        <span className="text-xs font-medium uppercase">{preset}</span>
+        <span className="text-xs text-slate-500">{config.pixels}px · <code>{config.token}</code></span>
+      </div>
+    );
+  })}
+</div>
+
+## How teams typically handle sizing
+
+- **Tailwind** — utility classes on the adapter (`className="size-5 shrink-0 inline-block"`) or your own preset in `tailwind.config`
+- **Design tokens** — map `icon-sm`, `icon-md` to CSS variables in your theme
+- **Wrapper component** — e.g. `<AppIcon name="square" size="sm" />` that maps `size` → classes internally
+- **Plain CSS** — `width` / `height` on the `<svg>` or host element
+
+`@design-assets/tailwind-preset/icon-sizes` exports the table above **for docs and Storybook only**. Copy or adapt it into your app if useful; do not treat it as a required runtime API.
+
+## Rules of thumb
+
+1. Square icons: use equal width and height (`size-6`, `h-6 w-6`, or both dimensions in CSS).
+2. In flex layouts: add `shrink-0` (and usually `inline-block`) so the icon does not stretch.
+3. Color: monochrome icons inherit `currentColor` from the parent — set `text-*` or `color` on the icon or its container.
+4. Flags, brand marks, illustrations: often need `h-* w-auto` or fixed aspect ratio — not the square icon scale.
+
+See [Getting Started](./getting-started) for copying assets to `public/` and adapter usage.

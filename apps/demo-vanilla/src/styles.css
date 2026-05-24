@@ -1,0 +1,48 @@
+.page {
+  font-family: system-ui, sans-serif;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.icon-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+code {
+  font-size: 0.875em;
+  background: #f1f5f9;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.text-brand-600 {
+  color: #2563eb;
+}
+
+.h-6 {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}

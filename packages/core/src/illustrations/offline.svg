@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none">
+  <rect width="240" height="160" rx="16" fill="var(--da-asset-background, #0f172a)"/>
+  <path d="M54 116h132" stroke="var(--da-asset-subtle, #475569)" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+  <path d="M80 72c22-22 58-22 80 0" stroke="var(--da-asset-muted, #64748b)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M98 91c12-12 32-12 44 0" stroke="var(--da-asset-primary, #94a3b8)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="108" r="7" fill="var(--da-asset-accent, #f59e0b)"/>
+  <path d="M76 42 164 118" stroke="var(--da-asset-danger, #ef4444)" stroke-width="6" stroke-linecap="round"/>
+</svg>

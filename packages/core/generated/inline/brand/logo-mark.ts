@@ -1,0 +1,6 @@
+// AUTO-GENERATED. DO NOT EDIT.
+export const logoMarkBrandInline = {
+  viewBox: '0 0 64 64',
+  innerHtml: '<rect width="52" height="52" x="6" y="6" fill="var(--da-brand-mark-background, #1e293b)" rx="14"/><path fill="var(--da-brand-mark-primary, #3b82f6)" d="m32 14 16 28H16z"/><path fill="var(--da-brand-mark-foreground, #eff6ff)" d="m32 26 7 12H25z"/>',
+  colorMode: 'colored',
+} as const;

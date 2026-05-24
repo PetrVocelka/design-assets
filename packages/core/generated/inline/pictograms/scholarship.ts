@@ -1,0 +1,6 @@
+// AUTO-GENERATED. DO NOT EDIT.
+export const scholarshipPictogramInline = {
+  viewBox: '0 0 48 48',
+  innerHtml: '<path fill="var(--da-asset-accent, #f59e0b)" stroke="var(--da-asset-ink, #1e3a8a)" stroke-linejoin="round" stroke-width="2" d="m24 6 4.5 12h12L31 25.5 35 38l-11-7.5L13 38l4-12.5L7.5 18h12z"/><rect width="22" height="6" x="13" y="36" fill="var(--da-asset-primary, #3b82f6)" rx="2"/><path stroke="var(--da-asset-strong, #1d4ed8)" stroke-linecap="round" stroke-width="2" d="M17 42h14"/>',
+  colorMode: 'colored',
+} as const;

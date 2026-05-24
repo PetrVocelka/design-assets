@@ -1,0 +1,132 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Architecture" />
+
+# Architecture
+
+<div className="grid gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5">
+  <div className="rounded-lg border border-slate-200 bg-white p-4">
+    <p className="m-0 text-sm font-semibold text-slate-900">@design-assets/core</p>
+    <p className="m-0 mt-1 text-sm text-slate-600">
+      Manifest, href helpers, generated SVG files, generated names, copy CLI.
+    </p>
+  </div>
+
+  <div className="grid gap-3 md:grid-cols-3">
+    <div className="rounded-lg border border-slate-200 bg-white p-4">
+      <p className="m-0 text-sm font-semibold text-slate-900">@design-assets/react</p>
+      <p className="m-0 mt-1 text-sm text-slate-600">
+        React external-file wrappers plus the <code>/inline</code> ATF entrypoint.
+      </p>
+    </div>
+    <div className="rounded-lg border border-slate-200 bg-white p-4">
+      <p className="m-0 text-sm font-semibold text-slate-900">@design-assets/angular</p>
+      <p className="m-0 mt-1 text-sm text-slate-600">
+        Standalone Angular components backed by the same generated manifest.
+      </p>
+    </div>
+    <div className="rounded-lg border border-slate-200 bg-white p-4">
+      <p className="m-0 text-sm font-semibold text-slate-900">
+        @design-assets/web-components
+      </p>
+      <p className="m-0 mt-1 text-sm text-slate-600">
+        Custom elements for HTML, Storybook previews, and framework-agnostic usage.
+      </p>
+    </div>
+  </div>
+
+  <div className="rounded-lg border border-dashed border-slate-300 bg-white p-4">
+    <p className="m-0 text-sm font-semibold text-slate-900">Future adapters</p>
+    <p className="m-0 mt-1 text-sm text-slate-600">
+      React Native or native mobile pipelines can reuse the manifest, but need platform-specific
+      rendering and conversion.
+    </p>
+  </div>
+</div>
+
+## Package Layers
+
+<div className="grid gap-3 md:grid-cols-2">
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">Source</p>
+    <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/core</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Framework-agnostic source of truth for stable built-in assets, demo custom groups, generated
+      SVG files, names, manifest, href helpers, validation, and the copy CLI.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">React</p>
+    <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/react</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      External-file <code>{'<use href>'}</code> wrappers by default, plus the <code>/inline</code>{' '}
+      ATF entrypoint for small critical assets.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">Angular</p>
+    <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/angular</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Standalone typed components such as <code>da-ng-icon</code>, backed by the same generated
+      manifest and href contract.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">HTML</p>
+    <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/web-components</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Lit custom elements such as <code>da-icon</code>, usable from static HTML, Storybook, and
+      frameworks that can consume custom elements.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:col-span-2">
+    <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">Docs only</p>
+    <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/tailwind-preset</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Example size scale for Storybook and demo apps. Runtime packages do not depend on Tailwind and
+      do not ship default dimensions.
+    </p>
+  </div>
+</div>
+
+## Demo Apps
+
+<div className="grid gap-3 md:grid-cols-2">
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-sm font-semibold text-slate-900">apps/demo-react</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      React playground for external vs inline rendering, currentColor comparison, flags, and
+      prerender measurements.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-sm font-semibold text-slate-900">apps/demo-vanilla</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Static HTML demo using <code>@design-assets/web-components</code> without a framework adapter.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-sm font-semibold text-slate-900">apps/demo-angular</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Angular adapter demo using standalone components and the generated manifest.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <p className="m-0 text-sm font-semibold text-slate-900">apps/docs</p>
+    <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
+      Storybook catalog for React examples, Web Component HTML examples, Angular snippets,
+      accessibility guidance, and release documentation.
+    </p>
+  </div>
+</div>
+
+Per-icon static SVG files are copied to the consumer's `public/` directory. Same-origin is required for external `<use href>` references.
+
+See [Icon Sizes](/docs/docs-icon-sizes--docs) for sizing guidance — dimensions are consumer CSS, not part of the asset API.

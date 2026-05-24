@@ -1,0 +1,6 @@
+// AUTO-GENERATED. DO NOT EDIT.
+export const gradeChartPictogramInline = {
+  viewBox: '0 0 48 48',
+  innerHtml: '<rect width="36" height="34" x="6" y="8" fill="var(--da-asset-surface, #eff6ff)" stroke="var(--da-asset-strong, #1d4ed8)" stroke-width="2" rx="4"/><path stroke="var(--da-asset-subtle, #cbd5e1)" stroke-linecap="round" stroke-width="2" d="M12 34h24"/><rect width="5" height="7" x="13" y="27" fill="var(--da-asset-primary, #3b82f6)" rx="1.5"/><rect width="5" height="13" x="22" y="21" fill="var(--da-asset-primary-strong, #2563eb)" rx="1.5"/><rect width="5" height="19" x="31" y="15" fill="var(--da-asset-strong, #1d4ed8)" rx="1.5"/><path stroke="var(--da-asset-success, #22c55e)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 22 9-6 7 4 7-8"/>',
+  colorMode: 'monochrome',
+} as const;

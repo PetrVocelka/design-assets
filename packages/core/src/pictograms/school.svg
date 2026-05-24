@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <path d="M5 16 24 7l19 9-19 9-19-9Z" fill="var(--da-asset-primary, #3b82f6)"/>
+  <path d="M12 20v11c0 4 5.5 7 12 7s12-3 12-7V20l-12 5-12-5Z" fill="var(--da-asset-surface, #dbeafe)" stroke="var(--da-asset-strong, #1d4ed8)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M40 17v13" stroke="var(--da-asset-muted, #334155)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="40" cy="34" r="2" fill="var(--da-asset-accent, #f59e0b)"/>
+</svg>
