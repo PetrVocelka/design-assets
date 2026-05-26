@@ -10,7 +10,7 @@ import {
 import { AngularAssetShowcase } from '../showcase/angular-asset-showcase';
 import { WcAssetShowcase } from '../showcase/wc-asset-showcase';
 import { createReactAssetShowcase } from '../showcase/react-asset-showcase';
-import { showcaseControlArgTypes } from '../showcase/showcase-shell';
+import { showcaseControlArgTypes, type RenderMode } from '../showcase/showcase-shell';
 import {
   a11yArgTypes,
   sizePresetArgType,
@@ -32,6 +32,9 @@ export interface ComponentStoriesConfig {
   reactExport: string;
   inlineCategory: string;
   reactIntro: ReactNode;
+  renderModes?: RenderMode[];
+  defaultRenderMode?: RenderMode;
+  reactStoryDescription?: string;
   htmlIntro: ReactNode;
   defaultDecorative: boolean;
   defaultAriaLabel: string;
@@ -42,6 +45,7 @@ export interface ComponentStoriesConfig {
 
 export function createComponentStories(config: ComponentStoriesConfig) {
   const ReactShowcase = createReactAssetShowcase({
+    assetCategory: config.assetCategory,
     inlineCategory: config.inlineCategory,
     reactExport: config.reactExport,
     nameProp: config.nameProp,
@@ -53,6 +57,8 @@ export function createComponentStories(config: ComponentStoriesConfig) {
   });
 
   const nameArgKey = config.nameProp ?? 'name';
+  const renderModes = config.renderModes ?? (['use', 'inline'] satisfies RenderMode[]);
+  const defaultRenderMode = config.defaultRenderMode ?? renderModes[0] ?? 'use';
 
   const meta = {
     parameters: {
@@ -98,12 +104,16 @@ export function createComponentStories(config: ComponentStoriesConfig) {
       options: Object.keys(config.sizePresets),
     },
     ...showcaseControlArgTypes,
+    renderMode: {
+      ...showcaseControlArgTypes.renderMode,
+      options: renderModes,
+    },
   };
 
   const showcaseArgs = {
     [nameArgKey]: config.defaultName,
     size: config.defaultSize,
-    renderMode: 'external' as const,
+    renderMode: defaultRenderMode,
     theme: 'light' as const,
     decorative: config.defaultDecorative,
     ariaLabel: config.defaultAriaLabel,
@@ -116,7 +126,9 @@ export function createComponentStories(config: ComponentStoriesConfig) {
     parameters: {
       docs: {
         description: {
-          story: 'Interactive React example — external `<use href>` by default, inline for ATF.',
+          story:
+            config.reactStoryDescription ??
+            'Interactive React example — external `<use href>` by default, inline for ATF.',
         },
       },
     },

@@ -16,7 +16,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     title: 'Flag',
     component: Flag,
     docsDescription:
-      'Country flag from `flag-icons`. Include `ariaLabel` with the country name when not redundant with adjacent text. Keep large flag catalogs in external-file mode so pages fetch only the flags they render.',
+      'Country flag from `flag-icons`. Prefer `img` for flags because they are self-contained colored assets. Use `inline` only for critical above-the-fold cases; reserve `use` for rare cases where you intentionally want SVG fragment rendering.',
     assetCategory: 'flags',
     manifestPrefix: 'flags',
     names: manifestNames('flags'),
@@ -30,10 +30,14 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     reactIntro: (
       <p className="text-sm text-slate-600">
         Flags should include a country name via <code>ariaLabel</code> when shown without adjacent
-        text. Size examples here are documentation-only. Inline flag exports exist for ATF demos,
-        not for rendering the full flag catalog inline.
+        text. Prefer <code>img</code> for flags; they do not need <code>currentColor</code> styling.
+        Inline flag exports exist for ATF demos, not for rendering the full flag catalog inline.
       </p>
     ),
+    renderModes: ['img', 'inline', 'use'],
+    defaultRenderMode: 'img',
+    reactStoryDescription:
+      'Interactive React example — `img` is the default for flags; inline is for ATF exceptions; `<use href>` is available but usually not the preferred flag mode.',
     htmlIntro: (
       <p className="text-sm text-slate-600">
         Flags use a fixed aspect ratio. Apply that ratio in your product CSS or wrapper component.

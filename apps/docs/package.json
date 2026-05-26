@@ -7,8 +7,7 @@
     "predev": "yarn copy:assets",
     "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/docs/public/design-assets",
     "dev": "yarn copy:assets && storybook dev -p 6006",
-    "prebuild": "yarn copy:assets",
-    "build": "storybook build",
+    "build": "yarn copy:assets && storybook build",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {

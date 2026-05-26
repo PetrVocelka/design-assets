@@ -1,7 +1,7 @@
 import type { CSSProperties, ReactNode } from 'react';
 
 export type Theme = 'light' | 'dark';
-export type RenderMode = 'external' | 'inline';
+export type RenderMode = 'use' | 'img' | 'inline';
 
 export function themeClasses(theme: Theme): string {
   return theme === 'dark'
@@ -67,9 +67,9 @@ export function inlineComponentName(category: string, assetName: string): string
 export const showcaseControlArgTypes = {
   renderMode: {
     name: 'Render mode',
-    description: 'External-file (default) vs inline ATF bundle',
+    description: 'Asset delivery mode for the example.',
     control: { type: 'select' as const },
-    options: ['external', 'inline'],
+    options: ['use', 'inline'],
   },
   theme: {
     name: 'Background',

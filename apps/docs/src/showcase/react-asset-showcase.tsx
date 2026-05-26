@@ -1,4 +1,5 @@
 import type { ComponentType, ReactNode } from 'react';
+import { DesignAssetImg } from '@design-assets/react';
 import * as InlineAssets from '@design-assets/react/inline';
 import {
   inlineComponentName,
@@ -7,6 +8,8 @@ import {
   type Theme,
 } from './showcase-shell';
 import type { SizePresetEntry } from '../stories/story-helpers';
+
+type AssetCategory = 'icons' | 'pictograms' | 'illustrations' | 'brand' | 'flags';
 
 type InlineProps = {
   decorative?: true;
@@ -24,6 +27,7 @@ export interface ReactAssetShowcaseProps {
 }
 
 interface ReactAssetShowcaseConfig {
+  assetCategory: AssetCategory;
   inlineCategory: string;
   reactExport: string;
   nameProp?: 'name' | 'countryCode';
@@ -61,6 +65,12 @@ function reactSnippet(
     return decorative
       ? `import { ${component} } from '@design-assets/react/inline';\n\n<${component} className="${className}" />`
       : `import { ${component} } from '@design-assets/react/inline';\n\n<${component} ariaLabel="${ariaLabel}" className="${className}" />`;
+  }
+
+  if (renderMode === 'img') {
+    return decorative
+      ? `import { DesignAssetImg } from '@design-assets/react';\n\n<DesignAssetImg category="${config.assetCategory}" name="${name}" className="${className}" />`
+      : `import { DesignAssetImg } from '@design-assets/react';\n\n<DesignAssetImg category="${config.assetCategory}" name="${name}" ariaLabel="${ariaLabel}" className="${className}" />`;
   }
 
   return decorative
@@ -102,9 +112,25 @@ export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {
       ) : (
         <InlineComponent ariaLabel={ariaLabel} className={selected.className} />
       );
+    } else if (renderMode === 'img') {
+      preview = (
+        <DesignAssetImg
+          category={config.assetCategory}
+          name={name}
+          className={selected.className}
+          {...(decorative ? {} : { ariaLabel })}
+        />
+      );
     } else {
       preview = <config.ExternalComponent {...externalProps} />;
     }
+
+    const modeLabel =
+      renderMode === 'use'
+        ? 'external `<use href>`'
+        : renderMode === 'img'
+          ? 'external `<img>`'
+          : 'inline bundle';
 
     return (
       <ShowcaseShell
@@ -113,8 +139,8 @@ export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {
         meta={
           <>
             <code>{name}</code> · <code>{selected.token}</code> ({selected.pixels}px) ·{' '}
-            {renderMode === 'external' ? 'external `<use href>`' : 'inline bundle'} ·{' '}
-            {decorative ? 'decorative' : `labelled (“${ariaLabel}”)`} · {theme} theme
+            {modeLabel} · {decorative ? 'decorative' : `labelled (“${ariaLabel}”)`} · {theme}{' '}
+            theme
           </>
         }
         snippet={snippet}
