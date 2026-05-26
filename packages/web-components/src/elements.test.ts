@@ -46,6 +46,7 @@ describe('da-icon', () => {
     expect(useEl?.getAttribute('href')).toMatch(
       new RegExp(`/design-assets/icons/square\\.svg\\?v=${ASSETS_VERSION}#asset$`),
     );
+    expect(useEl?.getAttribute('xlink:href')).toBeNull();
   });
 
   it('registers generic use and img primitives', async () => {
@@ -64,17 +65,19 @@ describe('da-icon', () => {
     expect(useEl.querySelector('use')?.getAttribute('href')).toMatch(
       new RegExp(`/design-assets/flags/cz\\.svg\\?v=${ASSETS_VERSION}#asset$`),
     );
+    expect(useEl.querySelector('use')?.getAttribute('xlink:href')).toBeNull();
 
     const imgEl = document.createElement('da-asset-img') as DaAssetImgElement;
     imgEl.category = 'flags';
     imgEl.name = 'cz';
-    imgEl.setAttribute('aria-label', 'Czech Republic');
+    imgEl.setAttribute('alt', 'Czech Republic');
     document.body.appendChild(imgEl);
     await imgEl.updateComplete;
 
     const img = imgEl.querySelector('img');
     expect(img?.getAttribute('src')).toBe(`/design-assets/flags/cz.svg?v=${ASSETS_VERSION}`);
     expect(img?.getAttribute('alt')).toBe('Czech Republic');
+    expect(img?.hasAttribute('aria-hidden')).toBe(false);
     expect(img?.getAttribute('loading')).toBe('lazy');
     expect(img?.getAttribute('decoding')).toBe('async');
   });

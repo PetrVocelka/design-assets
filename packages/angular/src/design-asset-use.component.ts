@@ -27,7 +27,7 @@ import {
       [attr.aria-label]="a11y().ariaLabel ?? null"
       focusable="false"
     >
-      <use [attr.href]="href()" [attr.xlink:href]="href()" />
+      <use [attr.href]="href()" />
     </svg>
   `,
   styles: [`

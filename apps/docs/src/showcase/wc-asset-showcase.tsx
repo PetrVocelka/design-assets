@@ -1,5 +1,10 @@
 import { createElement, type ReactNode } from 'react';
-import { ShowcaseShell, type RenderMode, type Theme } from './showcase-shell';
+import {
+  renderedAssetOutput,
+  ShowcaseShell,
+  type RenderMode,
+  type Theme,
+} from './showcase-shell';
 import type { SizePresetEntry } from '../stories/story-helpers';
 
 type WcCategory = 'icons' | 'pictograms' | 'illustrations' | 'brand' | 'flags';
@@ -28,6 +33,8 @@ function wcSnippet(
   const attrs = [`category="${category}"`, `name="${name}"`, `class="${className}"`];
   if (decorative) {
     attrs.push('decorative');
+  } else if (renderMode === 'img') {
+    attrs.push(`alt="${ariaLabel}"`);
   } else {
     attrs.push(`aria-label="${ariaLabel}"`);
   }
@@ -48,6 +55,14 @@ export function WcAssetShowcase({
   const tag = renderMode === 'img' ? 'da-asset-img' : 'da-asset-use';
   const selected = sizePresets[size] ?? Object.values(sizePresets)[0]!;
   const snippet = wcSnippet(renderMode, category, name, selected.className, decorative, ariaLabel);
+  const renderedOutput = renderedAssetOutput({
+    category,
+    name,
+    renderMode,
+    className: selected.className,
+    decorative,
+    ariaLabel,
+  });
 
   const elementProps: Record<string, string | boolean> = {
     category,
@@ -56,6 +71,8 @@ export function WcAssetShowcase({
   };
   if (decorative) {
     elementProps.decorative = true;
+  } else if (renderMode === 'img') {
+    elementProps.alt = ariaLabel;
   } else {
     elementProps['aria-label'] = ariaLabel;
   }
@@ -72,6 +89,7 @@ export function WcAssetShowcase({
         </>
       }
       snippet={snippet}
+      renderedOutput={renderedOutput}
     >
       {createElement(tag, elementProps)}
     </ShowcaseShell>

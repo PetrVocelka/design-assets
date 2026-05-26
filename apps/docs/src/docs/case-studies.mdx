@@ -1,0 +1,81 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Docs/Case Studies" />
+
+# Case studies
+
+These examples are sizing models, not universal performance claims. Measure real assets after SVG
+optimization, HTML minification, and compression. The goal is to show where an asset pipeline becomes
+useful: repeated markup, many prerendered pages, multiple locales, and teams using different frontend
+stacks.
+
+## Repeated SSG assets
+
+Inlining one icon is usually fine. The cost appears when the same optimized SVG block is repeated
+across many generated HTML files.
+
+```txt
+10 repeated appearances x 10,000 pages x 6 locales = 600,000 inline copies
+600,000 copies x 0.8 KB optimized inline SVG = about 480 MB of repeated HTML
+```
+
+Compression can reduce transfer size, and a CDN can cache the generated HTML. That still does not make
+the duplicated markup disappear from the prerendered output, deploy artifact, static hosting storage, or
+HTML parse surface. If the same non-critical asset can be fetched once as
+`/design-assets/icons/square.svg?v=0.1.0#asset`, the page HTML only needs the small wrapper and the
+browser can cache the SVG file by URL.
+
+The practical rule is not "never inline." Inline is still the right escape hatch for logos, theme
+switchers, and other above-the-fold chrome where a first-paint request would be visible. For repeated
+body content, related article cards, calculator lists, or large catalogs, external `use` or `img` mode is
+usually the safer default.
+
+## Shared assets across microfrontends
+
+The second case is organizational. A product can have a React marketing surface, an Angular app shell,
+and Web Components used in static pages or embedded widgets. The design team still wants one asset
+source, one naming contract, and one themed icon surface.
+
+React can render the typed wrapper:
+
+```tsx
+<Icon name="square" decorative className="size-5 text-blue-600" />
+```
+
+Angular can render the same asset file through the generic primitive:
+
+```html
+<design-asset-use
+  category="icons"
+  name="square"
+  class="size-5 text-blue-600"
+  [decorative]="true"
+/>
+```
+
+Plain HTML or a microfrontend host can use the custom element:
+
+```html
+<da-asset-use category="icons" name="square" class="size-5 text-blue-600" decorative></da-asset-use>
+```
+
+All three point to the same versioned SVG contract:
+
+```html
+<use href="/design-assets/icons/square.svg?v=0.1.0#asset"></use>
+```
+
+For `currentColor` icons, each host owns layout and color through normal CSS. For richer custom groups,
+semantic CSS variables can keep theme intent in sync without duplicating asset files:
+
+```css
+.product-theme {
+  color: #2563eb;
+  --da-asset-primary: #2563eb;
+  --da-asset-ink: #0f172a;
+}
+```
+
+That is the useful boundary for this library: not a CDN product, not a DAM, and not a framework mandate.
+It is a small generated asset contract that lets different platforms render the same design asset
+without copying SVG internals into every app.

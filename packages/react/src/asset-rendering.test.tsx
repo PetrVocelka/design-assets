@@ -30,12 +30,13 @@ describe('generic asset rendering modes', () => {
     expect(svg?.querySelector('use')?.getAttribute('href')).toMatch(
       new RegExp(`/design-assets/brand/logo-mark\\.svg\\?v=${ASSETS_VERSION}#asset$`),
     );
+    expect(svg?.querySelector('use')?.getAttribute('xlink:href')).toBeNull();
   });
 
   it('renders any manifest asset through img without the svg fragment', () => {
     render(
       <DesignAssetsProvider>
-        <DesignAssetImg category="flags" name="cz" ariaLabel="Czech Republic" className="flag" />
+        <DesignAssetImg category="flags" name="cz" alt="Czech Republic" className="flag" />
       </DesignAssetsProvider>,
     );
 
@@ -61,6 +62,8 @@ describe('generic asset rendering modes', () => {
       'src',
       '/cdn/icons/square.svg',
     );
+    expect(container.querySelector('img')).toHaveAttribute('alt', '');
+    expect(container.querySelector('img')).not.toHaveAttribute('aria-hidden');
   });
 
   it('keeps production renderers off the full runtime manifest', () => {

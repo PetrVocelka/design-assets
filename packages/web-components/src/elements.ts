@@ -19,7 +19,6 @@ import {
   type PictogramName,
 } from '@petrvocelka/design-assets-core';
 
-import { readA11yFromElement, resolveAccessibility } from './a11y.js';
 import { getDesignAssetsConfig, readBaseUrl, readVersionTag } from './config.js';
 import { ExternalAssetElement } from './external-asset-element.js';
 
@@ -54,7 +53,7 @@ export class DaAssetUseElement extends ExternalAssetElement {
 export class DaAssetImgElement extends LitElement {
   @property({ type: String }) category: AssetCategory = 'icons';
   @property({ type: String }) name = 'square';
-  @property({ type: String, attribute: 'aria-label' }) ariaLabel = '';
+  @property({ type: String }) alt = '';
   @property({ type: String, reflect: true }) decorative: string | undefined;
   @property({ type: String, attribute: 'class' }) className = '';
   @property({ type: String }) loading: 'eager' | 'lazy' = 'lazy';
@@ -79,14 +78,13 @@ export class DaAssetImgElement extends LitElement {
       },
       getDesignAssetsConfig().resolveHref,
     );
-    const a11y = resolveAccessibility(readA11yFromElement(this));
+    const altText = this.hasAttribute('decorative') ? '' : this.alt;
 
     return html`
       <img
         src=${src}
         class=${this.className}
-        alt=${a11y.ariaLabel ?? ''}
-        aria-hidden=${a11y.ariaHidden ? 'true' : undefined}
+        alt=${altText}
         loading=${this.loading}
         decoding=${this.decoding}
       />

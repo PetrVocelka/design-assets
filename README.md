@@ -13,6 +13,7 @@ The default delivery mode is per-asset static SVG files rendered through `<use h
 - [Landing page](https://petrvocelka.github.io/design-assets/) explains the package surface.
 - [React demo](https://petrvocelka.github.io/design-assets/react/) shows a live framework integration.
 - [Storybook](https://petrvocelka.github.io/design-assets/storybook/) is the canonical catalog for assets, render modes, and usage examples.
+- [Case studies](https://petrvocelka.github.io/design-assets/storybook/?path=/docs/docs-case-studies--docs) explain repeated SSG payload and cross-framework asset sharing.
 
 Storybook is the documentation source of truth. The framework demos are proof-of-use apps that show how the same generated assets behave in real application builds. Angular and Web Components demos live in this monorepo and are follow-up targets for the public Pages surface.
 
@@ -65,6 +66,20 @@ The runtime packages do not depend on Tailwind or ship default sizes. Add sizing
 | `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
 | `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
 
+## SVG `<use>` Compatibility
+
+The external-file renderer intentionally emits modern `href` only:
+
+```html
+<use href="/design-assets/icons/square.svg?v=0.1.0#asset"></use>
+```
+
+| Target | Support Contract | Size Decision |
+| --- | --- | --- |
+| Current Chrome, Edge, Firefox, and Safari | Supported with `href` on SVG `<use>`. | Default path for the public package. |
+| Older `xlink:href`-only SVG implementations | Not a target for the generated wrapper markup. | The duplicate fallback can be longer than small inline icons, so it is omitted. |
+| Source SVG internals | Preserved as authored or optimized by the asset pipeline. | Vendor/source SVGs may still contain internal `xlink:href="#id"` references when the SVG itself needs them. |
+
 ## Packages
 
 | Package | Purpose |
@@ -106,6 +121,13 @@ Inline mode is available for critical above-the-fold assets:
 import { LogoMark } from '@petrvocelka/design-assets-react/inline';
 
 <LogoMark ariaLabel="Design Assets" className="h-6 w-auto" />;
+```
+
+Image mode uses the native `alt` contract instead of SVG `ariaLabel`:
+
+```tsx
+<DesignAssetImg category="flags" name="cz" alt="Czech Republic" />;
+<DesignAssetImg category="icons" name="square" decorative />;
 ```
 
 Angular generated inline selectors name the asset directly:

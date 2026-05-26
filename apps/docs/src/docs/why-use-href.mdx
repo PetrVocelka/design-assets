@@ -32,3 +32,5 @@ The library supports all three forms for every asset category:
 | `inline` | Logos, primary navigation, theme switchers, and other above-the-fold critical icons. | No request and no flash; path data is duplicated per render, so keep it selective. |
 | `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
 | `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
+
+See **Docs/Case Studies** for the repeated SSG payload model and the cross-framework microfrontend sharing example.

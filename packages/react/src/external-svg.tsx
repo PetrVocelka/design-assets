@@ -69,7 +69,7 @@ export function ExternalSvg({
       aria-label={ariaLabel}
       focusable="false"
     >
-      <use href={href} xlinkHref={href} />
+      <use href={href} />
     </svg>
   );
 }

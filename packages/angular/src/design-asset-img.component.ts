@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import type { AssetCategory } from '@petrvocelka/design-assets-core/names';
 
-import { resolveA11yInputs } from './a11y';
 import { DESIGN_ASSETS_CONFIG } from './design-assets-config';
 import { resolveAssetImgSrc } from './asset-resolver';
 
@@ -19,8 +18,7 @@ import { resolveAssetImgSrc } from './asset-resolver';
   template: `
     <img
       [src]="src()"
-      [alt]="a11y().ariaLabel ?? ''"
-      [attr.aria-hidden]="a11y().ariaHidden === true ? true : null"
+      [alt]="altText()"
       [attr.width]="width() ?? null"
       [attr.height]="height() ?? null"
       [attr.loading]="loading()"
@@ -44,7 +42,7 @@ export class DesignAssetImgComponent {
   readonly name = input.required<string>();
   readonly className = input<string>('', { alias: 'class' });
   readonly decorative = input<boolean | undefined>(undefined);
-  readonly ariaLabel = input<string | undefined>(undefined);
+  readonly alt = input<string | undefined>(undefined);
   readonly baseUrl = input<string | undefined>(undefined);
   readonly versionTag = input<string | null | undefined>(undefined);
   readonly width = input<number | string | undefined>(undefined);
@@ -64,7 +62,7 @@ export class DesignAssetImgComponent {
     ),
   );
 
-  protected readonly a11y = computed(() =>
-    resolveA11yInputs(this.decorative(), this.ariaLabel()),
+  protected readonly altText = computed(() =>
+    this.decorative() ? '' : (this.alt() ?? ''),
   );
 }

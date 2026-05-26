@@ -32,6 +32,7 @@ describe('generic Angular asset rendering modes', () => {
       const source = sourceText(file);
       expect(source, file).not.toMatch(/\bmanifest\b/);
       expect(source, file).not.toContain("from '@petrvocelka/design-assets-core'");
+      expect(source, file).not.toContain('xlink:href');
     }
   });
 
@@ -42,12 +43,18 @@ describe('generic Angular asset rendering modes', () => {
 
     expect(useSource).toContain("host: { '[class]': 'className()' }");
     expect(useSource).toContain(':host > svg');
+    expect(useSource).toContain('[attr.href]="href()"');
+    expect(useSource).not.toContain('xlink:href');
     expect(useSource).not.toContain(':host(:not(.hidden))');
     expect(useSource).not.toMatch(/:host\s*\{[^}]*display:/s);
     expect(useSource).not.toContain('[class]="className()"');
 
     expect(imgSource).toContain("host: { '[class]': 'className()' }");
     expect(imgSource).toContain(':host > img');
+    expect(imgSource).toContain('[alt]="altText()"');
+    expect(imgSource).toContain("readonly alt = input<string | undefined>(undefined)");
+    expect(imgSource).not.toContain('ariaLabel');
+    expect(imgSource).not.toContain('aria-hidden');
     expect(imgSource).not.toContain(':host(:not(.hidden))');
     expect(imgSource).not.toMatch(/:host\s*\{[^}]*display:/s);
     expect(imgSource).not.toContain('[class]="className()"');

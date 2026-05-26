@@ -3,6 +3,7 @@ import { DesignAssetImg } from '@petrvocelka/design-assets-react';
 import * as InlineAssets from '@petrvocelka/design-assets-react/inline';
 import {
   inlineComponentName,
+  renderedAssetOutput,
   ShowcaseShell,
   type RenderMode,
   type Theme,
@@ -58,7 +59,8 @@ function reactSnippet(
   className: string,
 ): string {
   const nameProp = config.nameProp ?? 'name';
-  const a11yProps = decorative ? [] : [`ariaLabel="${ariaLabel}"`];
+  const svgA11yProps = decorative ? [] : [`ariaLabel="${ariaLabel}"`];
+  const imgA11yProps = decorative ? ['decorative'] : [`alt="${ariaLabel}"`];
   const renderComponent = (component: string, props: string[]): string =>
     `<${component}\n${props.map((prop) => `  ${prop}`).join('\n')}\n/>`;
 
@@ -66,7 +68,7 @@ function reactSnippet(
     const component = inlineComponentName(config.inlineCategory, name);
     return `import { ${component} } from '@petrvocelka/design-assets-react/inline';
 
-${renderComponent(component, [...a11yProps, `className="${className}"`])}`;
+${renderComponent(component, [...svgA11yProps, `className="${className}"`])}`;
   }
 
   if (renderMode === 'img') {
@@ -77,7 +79,7 @@ ${renderComponent(
   [
     `category="${config.assetCategory}"`,
     `name="${name}"`,
-    ...a11yProps,
+    ...imgA11yProps,
     `className="${className}"`,
   ],
 )}`;
@@ -87,7 +89,7 @@ ${renderComponent(
 
 ${renderComponent(
   config.reactExport,
-  [`${nameProp}="${name}"`, ...a11yProps, `className="${className}"`],
+  [`${nameProp}="${name}"`, ...svgA11yProps, `className="${className}"`],
 )}`;
 }
 
@@ -110,6 +112,14 @@ export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {
       ariaLabel,
       selected.className,
     );
+    const renderedOutput = renderedAssetOutput({
+      category: config.assetCategory,
+      name,
+      renderMode,
+      className: selected.className,
+      decorative,
+      ariaLabel,
+    });
 
     let preview: ReactNode;
     const externalProps = {
@@ -126,12 +136,19 @@ export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {
         <InlineComponent ariaLabel={ariaLabel} className={selected.className} />
       );
     } else if (renderMode === 'img') {
-      preview = (
+      preview = decorative ? (
         <DesignAssetImg
           category={config.assetCategory}
           name={name}
           className={selected.className}
-          {...(decorative ? {} : { ariaLabel })}
+          decorative
+        />
+      ) : (
+        <DesignAssetImg
+          category={config.assetCategory}
+          name={name}
+          className={selected.className}
+          alt={ariaLabel}
         />
       );
     } else {
@@ -157,6 +174,7 @@ export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {
           </>
         }
         snippet={snippet}
+        renderedOutput={renderedOutput}
       >
         {preview}
       </ShowcaseShell>

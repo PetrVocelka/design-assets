@@ -47,7 +47,7 @@ export abstract class ExternalAssetElement extends LitElement {
         aria-label=${a11y.ariaLabel}
         focusable="false"
       >
-        <use href=${href} xlink:href=${href}></use>
+        <use href=${href}></use>
       </svg>
     `;
   }

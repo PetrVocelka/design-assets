@@ -1,6 +1,7 @@
 import { createElement, type ReactNode } from 'react';
 import {
   inlineComponentName,
+  renderedAssetOutput,
   ShowcaseShell,
   type RenderMode,
   type Theme,
@@ -38,7 +39,8 @@ function buildAngularSnippet(
   decorative: boolean,
   ariaLabel: string,
 ): string {
-  const a11y = decorative ? '[decorative]="true"' : `[ariaLabel]="'${ariaLabel}'"`;
+  const svgA11y = decorative ? '[decorative]="true"' : `[ariaLabel]="'${ariaLabel}'"`;
+  const imgA11y = decorative ? '[decorative]="true"' : `alt="${ariaLabel}"`;
 
   if (renderMode === 'inline') {
     const importName = `${inlineComponentName(category, name)}Component`;
@@ -51,7 +53,7 @@ function buildAngularSnippet(
   template: \`
     <${selector}
       class="${className}"
-      ${a11y}
+      ${svgA11y}
     />
   \`,
 })
@@ -60,6 +62,7 @@ export class ExampleComponent {}`;
 
   const importName = renderMode === 'img' ? 'DesignAssetImgComponent' : 'DesignAssetUseComponent';
   const selector = renderMode === 'img' ? 'design-asset-img' : 'design-asset-use';
+  const a11y = renderMode === 'img' ? imgA11y : svgA11y;
 
   return `import { ${importName}, provideDesignAssets } from '@petrvocelka/design-assets-angular';
 
@@ -101,6 +104,14 @@ export function AngularAssetShowcase({
     decorative,
     ariaLabel,
   );
+  const renderedOutput = renderedAssetOutput({
+    category,
+    name,
+    renderMode,
+    className: selected.className,
+    decorative,
+    ariaLabel,
+  });
 
   const elementProps: Record<string, string | boolean> = {
     category,
@@ -109,6 +120,8 @@ export function AngularAssetShowcase({
   };
   if (decorative) {
     elementProps.decorative = true;
+  } else if (renderMode === 'img') {
+    elementProps.alt = ariaLabel;
   } else {
     elementProps['aria-label'] = ariaLabel;
   }
@@ -134,6 +147,7 @@ export function AngularAssetShowcase({
         </>
       }
       snippet={snippet}
+      renderedOutput={renderedOutput}
     >
       {createElement(tag, elementProps)}
     </ShowcaseShell>

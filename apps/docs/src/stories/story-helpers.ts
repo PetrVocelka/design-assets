@@ -9,11 +9,13 @@ export function manifestNames(category: string): string[] {
 
 export const a11yArgTypes = {
   decorative: {
-    description: 'Marks the asset as decorative (`aria-hidden`). Default when omitted.',
+    description:
+      'Marks the asset as decorative (`aria-hidden` for SVG, `alt=""` for img mode).',
     control: 'boolean' as const,
   },
   ariaLabel: {
-    description: 'Accessible name when the asset carries meaning on its own.',
+    description:
+      'Accessible name for SVG modes; shown as native `alt` text in img mode examples.',
     control: { type: 'text' as const },
     if: { arg: 'decorative', eq: false },
   },

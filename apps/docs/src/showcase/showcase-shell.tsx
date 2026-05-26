@@ -1,7 +1,10 @@
 import type { CSSProperties, ReactNode } from 'react';
+import { manifest } from '@petrvocelka/design-assets-core/manifest';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core/version';
 
 export type Theme = 'light' | 'dark';
 export type RenderMode = 'use' | 'img' | 'inline';
+type AssetCategory = 'icons' | 'pictograms' | 'illustrations' | 'brand' | 'flags';
 
 export function themeClasses(theme: Theme): string {
   return theme === 'dark'
@@ -87,12 +90,80 @@ export const showcaseControlArgTypes = {
   },
 };
 
+function escapeAttribute(value: string): string {
+  return value.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
+}
+
+function assetPath(category: AssetCategory, name: string): string {
+  return `/design-assets/${category}/${name}.svg?v=${ASSETS_VERSION}`;
+}
+
+function assetViewBox(category: AssetCategory, name: string): string {
+  const manifestKey = `${category}/${name}` as keyof typeof manifest;
+  return manifest[manifestKey]?.viewBox ?? '0 0 24 24';
+}
+
+export function renderedAssetOutput({
+  category,
+  name,
+  renderMode,
+  className,
+  decorative,
+  ariaLabel,
+}: {
+  category: AssetCategory;
+  name: string;
+  renderMode: RenderMode;
+  className: string;
+  decorative: boolean;
+  ariaLabel: string;
+}): string {
+  const escapedClassName = escapeAttribute(className);
+  const escapedLabel = escapeAttribute(ariaLabel);
+
+  if (renderMode === 'img') {
+    return `<img
+  src="${assetPath(category, name)}"
+  alt="${decorative ? '' : escapedLabel}"
+  class="${escapedClassName}"
+  loading="lazy"
+  decoding="async"
+/>`;
+  }
+
+  const svgA11y = decorative
+    ? 'aria-hidden="true"'
+    : `role="img"
+  aria-label="${escapedLabel}"`;
+
+  if (renderMode === 'inline') {
+    return `<svg
+  viewBox="${assetViewBox(category, name)}"
+  class="${escapedClassName}"
+  ${svgA11y}
+  focusable="false"
+>
+  <!-- generated SVG paths are inlined here -->
+</svg>`;
+  }
+
+  return `<svg
+  viewBox="${assetViewBox(category, name)}"
+  class="${escapedClassName}"
+  ${svgA11y}
+  focusable="false"
+>
+  <use href="${assetPath(category, name)}#asset"></use>
+</svg>`;
+}
+
 interface ShowcaseShellProps {
   intro: ReactNode;
   previewLabel?: string;
   theme: Theme;
   meta: ReactNode;
   snippet: string;
+  renderedOutput: string;
   children: ReactNode;
 }
 
@@ -102,6 +173,7 @@ export function ShowcaseShell({
   theme,
   meta,
   snippet,
+  renderedOutput,
   children,
 }: ShowcaseShellProps) {
   const surface = themeClasses(theme);
@@ -112,6 +184,22 @@ export function ShowcaseShell({
       {intro}
 
       <section>
+        <h3 className="mb-3 text-sm font-medium text-slate-600">
+          Example usage (sizing is consumer-owned)
+        </h3>
+        <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs text-slate-100">
+          {snippet}
+        </pre>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-sm font-medium text-slate-600">Rendered output</h3>
+        <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs text-slate-100">
+          {renderedOutput}
+        </pre>
+      </section>
+
+      <section>
         <h3 className="mb-2 text-sm font-medium text-slate-600">{previewLabel}</h3>
         <div
           className={`flex min-h-[120px] items-center justify-center rounded-xl border p-8 ${surface}`}
@@ -120,15 +208,6 @@ export function ShowcaseShell({
           {children}
         </div>
         <p className="mt-2 text-xs text-slate-500">{meta}</p>
-      </section>
-
-      <section>
-        <h3 className="mb-3 text-sm font-medium text-slate-600">
-          Example usage (sizing is consumer-owned)
-        </h3>
-        <pre className="overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs text-slate-100">
-          {snippet}
-        </pre>
       </section>
     </div>
   );
