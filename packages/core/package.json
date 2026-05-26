@@ -1,6 +1,6 @@
 {
   "name": "@petrvocelka/design-assets-core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Framework-agnostic SVG asset core with typed names, versioned href helpers, generated files, validation, and copy CLI.",
   "license": "MIT",
   "type": "module",
