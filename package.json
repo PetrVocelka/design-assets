@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:pages": "yarn workspace @design-assets/demo-react build && yarn workspace @design-assets/docs build && node scripts/build-pages.mjs",
+    "build:pages": "yarn workspace @design-assets/demo-react build && yarn workspace @petrvocelka/design-assets-web-components build && yarn workspace @design-assets/docs build && node scripts/build-pages.mjs",
     "lint": "turbo run lint --continue",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
