@@ -12,18 +12,29 @@ stacks.
 ## Repeated SSG assets
 
 Inlining one icon is usually fine. The cost appears when the same optimized SVG block is repeated
-across many generated HTML files.
+across many generated HTML files. A typical SSG example is a product or article page with related
+cards: every page has a different set of cards, but each card repeats the same "buy", "open", or
+"calculator" icon inside a button.
 
 ```txt
 10 repeated appearances x 10,000 pages x 6 locales = 600,000 inline copies
 600,000 copies x 0.8 KB optimized inline SVG = about 480 MB of repeated HTML
 ```
 
-Compression can reduce transfer size, and a CDN can cache the generated HTML. That still does not make
-the duplicated markup disappear from the prerendered output, deploy artifact, static hosting storage, or
-HTML parse surface. If the same non-critical asset can be fetched once as
+Gzip, Brotli, and CDN caching still help. They reduce transfer size and make repeated requests for the
+same HTML document cheap. They do not remove repeated inline SVG path data from thousands of unique
+prerendered documents. Each route, locale, and related-card combination can still produce a distinct
+HTML file that physically contains the same SVG internals again.
+
+That duplicated markup shows up before the browser cache can help: generated output size, deploy
+artifact size, static hosting storage, CDN cache entries for unique pages, and the amount of HTML the
+browser has to parse. If the same non-critical asset can be fetched once as
 `/design-assets/icons/square.svg?v=0.1.0#asset`, the page HTML only needs the small wrapper and the
-browser can cache the SVG file by URL.
+browser can cache the SVG file by URL across those unique pages.
+
+After that file is cached, the difference is mostly rendering shape: inline repeats SVG internals in the
+document, `use` repeats a small wrapper that points at the cached resource, and `img` keeps self-contained
+assets in the browser image pipeline.
 
 The practical rule is not "never inline." Inline is still the right escape hatch for logos, theme
 switchers, and other above-the-fold chrome where a first-paint request would be visible. For repeated

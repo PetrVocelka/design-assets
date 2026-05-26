@@ -19,6 +19,9 @@ The external SVG render strategy is:
 3. **No JS runtime work** — native fetch and cache
 4. **No payload duplication across prerendered pages** — critical for SSG sites
 
+Compression and CDN caching reduce transfer cost, but they do not remove repeated inline SVG markup from
+unique prerendered HTML documents such as pages with different related-product cards.
+
 `<img src="icon.svg">` cannot inherit `text-blue-600`. Use it when the asset is already fully colored, does not need `currentColor`, and benefits from native image behavior such as `loading="lazy"` and `decoding="async"`:
 
 ```html
@@ -32,5 +35,38 @@ The library supports all three forms for every asset category:
 | `inline` | Logos, primary navigation, theme switchers, and other above-the-fold critical icons. | No request and no flash; path data is duplicated per render, so keep it selective. |
 | `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
 | `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
+
+## Performance after cache
+
+Once the SVG file is already in the browser cache, the tradeoff is no longer mainly network latency. The
+remaining costs are HTML size, DOM size, style recalculation, SVG paint work, and whether the asset can
+be reused as a separate browser resource across many unique pages.
+
+| Mode | Cached repeat cost | Best fit |
+| --- | --- | --- |
+| `inline` | No request, but every instance adds SVG markup and path nodes to the document. This is fastest for one critical first-paint icon, but expensive when repeated through lists, cards, and prerendered pages. | Above-the-fold chrome: logo, theme switcher, critical navigation. |
+| `use` | Small DOM wrapper plus a cached SVG file. The page repeats only `<svg><use href="...#asset"></use></svg>`, while the path data stays in the external resource. | Repeated UI icons that need `currentColor`, hover states, dark mode, or design-token coloring. |
+| `img` | One image element backed by the browser image pipeline. It is the most isolated option, but cannot style SVG internals with `currentColor`. | Flags, logos, and colored self-contained assets. |
+
+For repeated product cards or related-article cards, external `use` is usually the best balance for UI
+icons: it keeps the DOM small, lets the browser cache the SVG file, and still supports color inheritance.
+For self-contained colored assets, `img` is often the cheapest rendering surface because the SVG internals
+do not join the page DOM.
+
+## Failure isolation and safety
+
+External rendering also narrows the blast radius of broken assets. If an inline SVG is generated
+incorrectly, the bad markup is part of the HTML/DOM for every page where it appears. The validation
+pipeline should catch that, but the failure lives inside the document.
+
+With external `use`, a missing or invalid SVG file normally leaves the wrapper in place and the icon does
+not paint. With `img`, the browser treats the asset as an image resource, so a broken file falls back to
+native image behavior and `alt` text. In both external modes, the surrounding app DOM is less likely to be
+affected by a single bad asset file.
+
+This is not a reason to accept arbitrary untrusted SVGs. Source assets should still be optimized,
+validated, and reviewed. The practical point is smaller: external `use` and `img` keep asset internals out
+of repeated page markup, which improves containment when an asset is missing, corrupted, or needs to be
+replaced.
 
 See **Docs/Case Studies** for the repeated SSG payload model and the cross-framework microfrontend sharing example.
