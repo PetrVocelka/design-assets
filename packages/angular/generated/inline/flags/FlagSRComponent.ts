@@ -9,12 +9,12 @@ import { srFlagInline } from '../../../../core/generated/inline/flags/sr';
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-flag-sr',
+  selector: 'design-asset-flag-sr',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

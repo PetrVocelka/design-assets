@@ -9,12 +9,12 @@ import { nzFlagInline } from '../../../../core/generated/inline/flags/nz';
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-flag-nz',
+  selector: 'design-asset-flag-nz',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

@@ -9,12 +9,12 @@ import { pmFlagInline } from '../../../../core/generated/inline/flags/pm';
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-flag-pm',
+  selector: 'design-asset-flag-pm',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

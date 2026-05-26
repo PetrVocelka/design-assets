@@ -9,12 +9,12 @@ import { tkFlagInline } from '../../../../core/generated/inline/flags/tk';
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-flag-tk',
+  selector: 'design-asset-flag-tk',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

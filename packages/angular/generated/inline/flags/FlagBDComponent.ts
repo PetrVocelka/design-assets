@@ -9,12 +9,12 @@ import { bdFlagInline } from '../../../../core/generated/inline/flags/bd';
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-flag-bd',
+  selector: 'design-asset-flag-bd',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

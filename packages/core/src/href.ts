@@ -19,15 +19,23 @@ export interface AssetHrefResolverContext {
 
 export type AssetHrefResolver = (context: AssetHrefResolverContext) => string;
 
-export function buildAssetHref(
+export function buildAssetUrl(
   baseUrl: string,
   category: string,
   name: string,
   versionTag?: string | null,
 ): string {
   const path = `${baseUrl}/${category}/${name}.svg`;
-  const withVersion = versionTag ? `${path}?v=${versionTag}` : path;
-  return `${withVersion}#asset`;
+  return versionTag ? `${path}?v=${versionTag}` : path;
+}
+
+export function buildAssetHref(
+  baseUrl: string,
+  category: string,
+  name: string,
+  versionTag?: string | null,
+): string {
+  return `${buildAssetUrl(baseUrl, category, name, versionTag)}#asset`;
 }
 
 export function resolveAssetHref(
@@ -45,12 +53,28 @@ export function getIconHref(
   return buildAssetHref(baseUrl, 'icons', name, versionTag);
 }
 
+export function getIconUrl(
+  name: IconName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetUrl(baseUrl, 'icons', name, versionTag);
+}
+
 export function getPictogramHref(
   name: PictogramName,
   baseUrl: string = DEFAULT_BASE_URL,
   versionTag?: string | null,
 ): string {
   return buildAssetHref(baseUrl, 'pictograms', name, versionTag);
+}
+
+export function getPictogramUrl(
+  name: PictogramName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetUrl(baseUrl, 'pictograms', name, versionTag);
 }
 
 export function getIllustrationHref(
@@ -61,6 +85,14 @@ export function getIllustrationHref(
   return buildAssetHref(baseUrl, 'illustrations', name, versionTag);
 }
 
+export function getIllustrationUrl(
+  name: IllustrationName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetUrl(baseUrl, 'illustrations', name, versionTag);
+}
+
 export function getBrandAssetHref(
   name: BrandAssetName,
   baseUrl: string = DEFAULT_BASE_URL,
@@ -69,10 +101,26 @@ export function getBrandAssetHref(
   return buildAssetHref(baseUrl, 'brand', name, versionTag);
 }
 
+export function getBrandAssetUrl(
+  name: BrandAssetName,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetUrl(baseUrl, 'brand', name, versionTag);
+}
+
 export function getFlagHref(
   countryCode: CountryCode,
   baseUrl: string = DEFAULT_BASE_URL,
   versionTag?: string | null,
 ): string {
   return buildAssetHref(baseUrl, 'flags', countryCode, versionTag);
+}
+
+export function getFlagUrl(
+  countryCode: CountryCode,
+  baseUrl: string = DEFAULT_BASE_URL,
+  versionTag?: string | null,
+): string {
+  return buildAssetUrl(baseUrl, 'flags', countryCode, versionTag);
 }

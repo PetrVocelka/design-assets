@@ -1,15 +1,7 @@
-import {
-  getBrandAssetHref,
-  manifest,
-  resolveAssetHref,
-  type BrandAssetName,
-} from '@design-assets/core';
+import type { BrandAssetName } from '@design-assets/core/names';
 
 import { ExternalSvg, type AccessibleProps } from './external-svg.js';
-import {
-  resolveVersionTag,
-  useDesignAssets,
-} from './design-assets-provider.js';
+import { useResolvedAsset } from './asset-resolver.js';
 
 export type BrandAssetProps = AccessibleProps & {
   name: BrandAssetName;
@@ -25,25 +17,16 @@ export function BrandAsset({
   versionTag: versionTagOverride,
   ...a11y
 }: BrandAssetProps) {
-  const { baseUrl, versionTag, resolveHref } = useDesignAssets();
-  const entry = manifest[`brand/${name}`];
-  const resolvedBaseUrl = baseUrlOverride ?? baseUrl;
-  const resolvedVersionTag = resolveVersionTag(versionTag, versionTagOverride);
-  const defaultHref = getBrandAssetHref(name, resolvedBaseUrl, resolvedVersionTag);
-  const href = resolveAssetHref(
-    {
-      category: 'brand',
-      name,
-      baseUrl: resolvedBaseUrl,
-      versionTag: resolvedVersionTag,
-      defaultHref,
-    },
-    resolveHref,
-  );
+  const { href, viewBox } = useResolvedAsset({
+    category: 'brand',
+    name,
+    baseUrl: baseUrlOverride,
+    versionTag: versionTagOverride,
+  });
 
   return (
     <ExternalSvg
-      viewBox={entry?.viewBox ?? '0 0 64 64'}
+      viewBox={viewBox}
       href={href}
       className={className}
       {...a11y}

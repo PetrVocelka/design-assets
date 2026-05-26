@@ -28,14 +28,14 @@ defineDesignAssetsElements({ categories: ['icons', 'brand'] });
 React and Angular consumers should import only the adapters they use:
 
 ```tsx
-import { Icon, BrandAsset } from '@design-assets/react';
+import { DesignAssetImg, DesignAssetUse, Icon, BrandAsset } from '@design-assets/react';
 ```
 
 ```ts
-import { IconComponent, BrandAssetComponent } from '@design-assets/angular';
+import { DesignAssetImgComponent, DesignAssetUseComponent, IconComponent, BrandAssetComponent } from '@design-assets/angular';
 ```
 
-Bundlers can tree-shake unused adapter code, but public SVG availability is still controlled by the copied categories.
+Bundlers can tree-shake unused adapter code. Public SVG availability is still controlled by the copied categories, and the same copied SVG can be rendered as external `<use>`, `<img>`, or a generated inline component.
 
 ## Sizing
 

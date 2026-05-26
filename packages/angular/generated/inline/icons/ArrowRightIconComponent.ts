@@ -9,12 +9,12 @@ import { arrowRightIconInline } from '../../../../core/generated/inline/icons/ar
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-arrow-right',
+  selector: 'design-asset-icon-arrow-right',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

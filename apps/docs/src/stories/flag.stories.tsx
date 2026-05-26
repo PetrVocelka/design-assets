@@ -42,7 +42,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     defaultDecorative: false,
     defaultAriaLabel: FLAG_LABELS.cz,
     angularComponent: 'FlagComponent',
-    angularSnippet: `<da-ng-flag countryCode="cz" ariaLabel="Czech Republic" />`,
+    angularSnippet: `<design-asset-flag countryCode="cz" ariaLabel="Czech Republic" />`,
     getHref: (code) => getFlagHref(code as CountryCode),
   });
 

@@ -2,9 +2,9 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Docs/Why use href" />
 
-# Why `<use href>` instead of `<img>`
+# Why `<use href>` and when to use `<img>`
 
-The default render strategy is:
+The external SVG render strategy is:
 
 ```html
 <svg viewBox="0 0 24 24" class="text-blue-600 size-5">
@@ -19,4 +19,16 @@ The default render strategy is:
 3. **No JS runtime work** — native fetch and cache
 4. **No payload duplication across prerendered pages** — critical for SSG sites
 
-`<img src="icon.svg">` cannot inherit `text-blue-600`. See the playground's currentColor comparison demo.
+`<img src="icon.svg">` cannot inherit `text-blue-600`. Use it when the asset is already fully colored, does not need `currentColor`, and benefits from native image behavior such as `loading="lazy"` and `decoding="async"`:
+
+```html
+<img src="/design-assets/flags/cz.svg?v=1.0.0" alt="Czech Republic" loading="lazy" decoding="async" />
+```
+
+The library supports all three forms for every asset category:
+
+| Mode | Use for | Why |
+| --- | --- | --- |
+| `inline` | Logos, primary navigation, theme switchers, and other above-the-fold critical icons. | No request and no flash; path data is duplicated per render, so keep it selective. |
+| `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
+| `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |

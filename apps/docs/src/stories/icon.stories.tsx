@@ -39,7 +39,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
 
 @Component({
   imports: [IconComponent],
-  template: \`<da-ng-icon name="square" />\`,
+  template: \`<design-asset-icon name="square" />\`,
 })
 export class ShapeExample {}`,
   getHref: getIconHref,

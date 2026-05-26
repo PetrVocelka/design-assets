@@ -1,7 +1,7 @@
 {
   "name": "@design-assets/web-components",
   "version": "0.1.0",
-  "description": "Framework-agnostic design asset custom elements (da-icon, da-pictogram, …).",
+  "description": "Framework-agnostic custom elements for typed SVG design assets and versioned external rendering.",
   "license": "MIT",
   "type": "module",
   "sideEffects": [
@@ -27,7 +27,7 @@
     "lint": "eslint src --ext .ts"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*",
+    "@design-assets/core": "0.1.0",
     "lit": "^3.3.0"
   },
   "devDependencies": {

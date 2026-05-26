@@ -35,7 +35,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     defaultDecorative: false,
     defaultAriaLabel: 'Design Assets',
     angularComponent: 'BrandAssetComponent',
-    angularSnippet: `<da-ng-brand-asset name="logo-mark" ariaLabel="Design Assets" />`,
+    angularSnippet: `<design-asset-brand name="logo-mark" ariaLabel="Design Assets" />`,
     getHref: getBrandAssetHref,
   });
 

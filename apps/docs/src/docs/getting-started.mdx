@@ -4,19 +4,36 @@ import { Meta } from '@storybook/blocks';
 
 # Getting started
 
+Design Assets generates typed SVG assets, framework renderers, versioned external URLs, and inline escape hatches from the same source SVG files.
+
+## Choose a render mode
+
+| Mode | Use for | Why |
+| --- | --- | --- |
+| `inline` | Logos, primary navigation, theme switchers, and other above-the-fold critical icons. | No request and no flash; path data is duplicated per render, so keep it selective. |
+| `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
+| `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
+
 Install `@design-assets/core` and `@design-assets/react`, then copy assets into your app's `public/` directory:
 
 ```bash
 yarn design-assets copy ./public/design-assets
 ```
 
-Wrap your app:
+Wrap your app and choose the render mode per usage:
 
 ```tsx
-import { DesignAssetsProvider, Icon } from '@design-assets/react';
+import { DesignAssetImg, DesignAssetUse, DesignAssetsProvider, Icon } from '@design-assets/react';
 
 <DesignAssetsProvider baseUrl="/design-assets">
+  {/* Convenience icon wrapper: external SVG <use>. */}
   <Icon name="square" ariaLabel="Example shape" />
+
+  {/* Generic external SVG <use> for any category. */}
+  <DesignAssetUse category="brand" name="logo-mark" ariaLabel="Brand mark" />
+
+  {/* Generic image rendering for any category. */}
+  <DesignAssetImg category="flags" name="cz" ariaLabel="Czech Republic" />
 </DesignAssetsProvider>
 ```
 
@@ -32,5 +49,17 @@ For ATF assets such as the logo mark or primary navigation icons, use the inline
 ```tsx
 import { LogoMark } from '@design-assets/react/inline';
 ```
+
+Angular inline components follow the asset identity, not the delivery mechanism:
+
+```html
+<design-asset-icon-square />
+<design-asset-brand-logo-mark />
+<design-asset-flag-cz />
+```
+
+Use `design-asset-use` and `design-asset-img` when the render mode must stay dynamic. Generated inline selectors should not include suffixes such as `inline`; the inline behavior is already implied by importing the generated inline component.
+
+The asset model is the same in all three cases: one manifest, one public SVG file set, three render forms (`use`, `img`, `inline`).
 
 See **Guides/Inline vs External** for when to use each approach.

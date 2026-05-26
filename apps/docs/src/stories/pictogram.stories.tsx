@@ -35,7 +35,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     defaultDecorative: true,
     defaultAriaLabel: 'School',
     angularComponent: 'PictogramComponent',
-    angularSnippet: `<da-ng-pictogram name="school" />`,
+    angularSnippet: `<design-asset-pictogram name="school" />`,
     getHref: getPictogramHref,
   });
 

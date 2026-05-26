@@ -16,7 +16,7 @@ import { Meta } from '@storybook/blocks';
     <div className="rounded-lg border border-slate-200 bg-white p-4">
       <p className="m-0 text-sm font-semibold text-slate-900">@design-assets/react</p>
       <p className="m-0 mt-1 text-sm text-slate-600">
-        React external-file wrappers plus the <code>/inline</code> ATF entrypoint.
+        React external SVG, image, and inline asset entrypoints over the same manifest.
       </p>
     </div>
     <div className="rounded-lg border border-slate-200 bg-white p-4">
@@ -60,8 +60,8 @@ import { Meta } from '@storybook/blocks';
     <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">React</p>
     <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/react</p>
     <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
-      External-file <code>{'<use href>'}</code> wrappers by default, plus the <code>/inline</code>{' '}
-      ATF entrypoint for small critical assets.
+      External-file <code>{'<use href>'}</code> wrappers, image rendering, plus the{' '}
+      <code>/inline</code> ATF entrypoint for small critical assets.
     </p>
   </div>
 
@@ -69,7 +69,7 @@ import { Meta } from '@storybook/blocks';
     <p className="m-0 text-xs font-semibold uppercase tracking-wide text-slate-500">Angular</p>
     <p className="m-0 mt-2 text-sm font-semibold text-slate-900">@design-assets/angular</p>
     <p className="m-0 mt-2 text-sm leading-6 text-slate-600">
-      Standalone typed components such as <code>da-ng-icon</code>, backed by the same generated
+      Standalone typed components such as <code>design-asset-icon</code>, backed by the same generated
       manifest and href contract.
     </p>
   </div>
@@ -127,6 +127,12 @@ import { Meta } from '@storybook/blocks';
   </div>
 </div>
 
-Per-icon static SVG files are copied to the consumer's `public/` directory. Same-origin is required for external `<use href>` references.
+Static SVG files are copied to the consumer's `public/` directory. Same-origin is required for external `<use href>` references; `<img>` rendering can use the same files without the `#asset` fragment.
+
+## Naming Contract
+
+Render-mode components are generic and explicit: React exports `DesignAssetUse` and `DesignAssetImg`; Angular exposes `design-asset-use` and `design-asset-img`.
+
+Generated inline components are named after the concrete asset. Angular selectors use `design-asset-<category-singular>-<asset-name>`, for example `design-asset-icon-square`, `design-asset-brand-logo-mark`, and `design-asset-flag-cz`. They should not include implementation suffixes such as `inline`, because the selector represents the asset, while the import path represents the delivery mode.
 
 See [Icon Sizes](/docs/docs-icon-sizes--docs) for sizing guidance — dimensions are consumer CSS, not part of the asset API.

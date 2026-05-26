@@ -4,6 +4,8 @@ export {
   resolveVersionTag,
   type DesignAssetsConfig,
 } from './design-assets-config';
+export { DesignAssetUseComponent } from './design-asset-use.component';
+export { DesignAssetImgComponent } from './design-asset-img.component';
 export { IconComponent } from './icon.component';
 export { PictogramComponent } from './pictogram.component';
 export { IllustrationComponent } from './illustration.component';

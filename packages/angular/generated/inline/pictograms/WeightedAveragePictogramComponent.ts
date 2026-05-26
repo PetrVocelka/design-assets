@@ -9,12 +9,12 @@ import { weightedAveragePictogramInline } from '../../../../core/generated/inlin
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-weighted-average',
+  selector: 'design-asset-pictogram-weighted-average',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

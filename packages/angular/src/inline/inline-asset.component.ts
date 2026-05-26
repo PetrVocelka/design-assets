@@ -16,7 +16,7 @@ export interface InlineSpec {
 }
 
 @Component({
-  selector: 'da-ng-inline-asset',
+  selector: 'design-asset-inline',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `

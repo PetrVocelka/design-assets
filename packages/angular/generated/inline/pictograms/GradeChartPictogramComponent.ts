@@ -9,12 +9,12 @@ import { gradeChartPictogramInline } from '../../../../core/generated/inline/pic
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-grade-chart',
+  selector: 'design-asset-pictogram-grade-chart',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

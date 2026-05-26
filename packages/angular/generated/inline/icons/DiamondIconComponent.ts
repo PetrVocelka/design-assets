@@ -9,12 +9,12 @@ import { diamondIconInline } from '../../../../core/generated/inline/icons/diamo
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-diamond',
+  selector: 'design-asset-icon-diamond',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

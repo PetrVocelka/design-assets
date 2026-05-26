@@ -94,6 +94,16 @@ import { LogoMark } from '@design-assets/react/inline';
 
 Inline exports are generated broadly for demonstration and ATF escape hatches. Do not inline large catalogs such as all flags into product UI; keep those in external-file mode so the browser can fetch and cache only the files a page actually uses.
 
+Angular generated inline selectors name the asset, not the render mode:
+
+```html
+<design-asset-icon-square />
+<design-asset-brand-logo-mark />
+<design-asset-flag-cz />
+```
+
+For dynamic rendering, use `design-asset-use` or `design-asset-img` instead of encoding `use`, `img`, or `inline` into the asset selector itself.
+
 ## Angular
 
 ```ts
@@ -105,7 +115,7 @@ import { IconComponent, provideDesignAssets } from '@design-assets/angular';
   imports: [IconComponent],
   providers: [provideDesignAssets({ baseUrl: '/design-assets' })],
   template: `
-    <da-ng-icon name="square" />
+    <design-asset-icon name="square" />
   `,
 })
 export class AppComponent {}

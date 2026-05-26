@@ -29,11 +29,11 @@ const ANGULAR_IMPORTS: Record<AssetCategory, string> = {
 };
 
 const ANGULAR_SELECTORS: Record<AssetCategory, string> = {
-  icons: 'da-ng-icon',
-  pictograms: 'da-ng-pictogram',
-  illustrations: 'da-ng-illustration',
-  brand: 'da-ng-brand-asset',
-  flags: 'da-ng-flag',
+  icons: 'design-asset-icon',
+  pictograms: 'design-asset-pictogram',
+  illustrations: 'design-asset-illustration',
+  brand: 'design-asset-brand',
+  flags: 'design-asset-flag',
 };
 
 const ANGULAR_BINDINGS: Record<AssetCategory, string> = {

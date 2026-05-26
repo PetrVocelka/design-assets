@@ -10,6 +10,19 @@ export default defineConfig({
         __dirname,
         '../../packages/core/generated',
       ),
+      '@design-assets/core/href': resolve(__dirname, '../../packages/core/src/href.ts'),
+      '@design-assets/core/manifest': resolve(
+        __dirname,
+        '../../packages/core/generated/manifest.ts',
+      ),
+      '@design-assets/core/names': resolve(
+        __dirname,
+        '../../packages/core/generated/names.ts',
+      ),
+      '@design-assets/core/version': resolve(
+        __dirname,
+        '../../packages/core/generated/version.ts',
+      ),
       '@design-assets/react/inline': resolve(
         __dirname,
         '../../packages/react/generated/inline/index.ts',

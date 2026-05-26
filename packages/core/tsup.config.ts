@@ -30,7 +30,9 @@ export default defineConfig({
   entry: {
     index: 'src/index.ts',
     'bin/copy': 'bin/copy.ts',
+    href: 'src/href.ts',
     manifest: 'generated/manifest.ts',
+    names: 'generated/names.ts',
     version: 'generated/version.ts',
     ...collectGeneratedInlineEntries(),
   },

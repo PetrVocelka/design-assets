@@ -1,7 +1,7 @@
 {
   "name": "@design-assets/core",
   "version": "0.1.0",
-  "description": "Framework-agnostic enterprise design assets: generator, manifest, per-icon SVG files, and copy CLI.",
+  "description": "Framework-agnostic SVG asset core with typed names, versioned href helpers, generated files, validation, and copy CLI.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -11,15 +11,33 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./href": {
+      "types": "./dist/href.d.ts",
+      "import": "./dist/href.js",
+      "default": "./dist/href.js"
+    },
+    "./names": {
+      "types": "./dist/names.d.ts",
+      "import": "./dist/names.js",
+      "default": "./dist/names.js"
     },
     "./manifest": {
       "types": "./dist/manifest.d.ts",
-      "import": "./dist/manifest.js"
+      "import": "./dist/manifest.js",
+      "default": "./dist/manifest.js"
     },
     "./version": {
       "types": "./dist/version.d.ts",
-      "import": "./dist/version.js"
+      "import": "./dist/version.js",
+      "default": "./dist/version.js"
+    },
+    "./builder": {
+      "types": "./builder/asset-pack-builder.d.ts",
+      "import": "./builder/asset-pack-builder.mjs",
+      "default": "./builder/asset-pack-builder.mjs"
     },
     "./svg/*": "./generated/svg/*",
     "./generated/inline/*.js": {
@@ -28,6 +46,7 @@
     }
   },
   "files": [
+    "builder",
     "dist",
     "generated/svg",
     "generated/manifest.json"

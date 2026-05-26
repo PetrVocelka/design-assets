@@ -9,12 +9,12 @@ import { scholarshipPictogramInline } from '../../../../core/generated/inline/pi
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-scholarship',
+  selector: 'design-asset-pictogram-scholarship',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

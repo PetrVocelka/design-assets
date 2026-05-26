@@ -35,7 +35,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
     defaultDecorative: false,
     defaultAriaLabel: 'No results found',
     angularComponent: 'IllustrationComponent',
-    angularSnippet: `<da-ng-illustration
+    angularSnippet: `<design-asset-illustration
   name="empty-state"
   ariaLabel="No results found"
 />`,

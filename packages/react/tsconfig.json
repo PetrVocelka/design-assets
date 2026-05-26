@@ -1,8 +1,15 @@
 {
   "extends": "@design-assets/typescript-config/base.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "jsx": "react-jsx",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@design-assets/core": ["../core/src/index.ts"],
+      "@design-assets/core/href": ["../core/src/href.ts"],
+      "@design-assets/core/names": ["../core/generated/names.ts"],
+      "@design-assets/core/version": ["../core/generated/version.ts"]
+    }
   },
   "include": ["src/**/*", "generated/**/*", "scripts/**/*", "vitest.config.ts"]
 }

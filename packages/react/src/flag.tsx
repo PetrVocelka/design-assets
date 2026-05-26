@@ -1,15 +1,7 @@
-import {
-  getFlagHref,
-  manifest,
-  resolveAssetHref,
-  type CountryCode,
-} from '@design-assets/core';
+import type { CountryCode } from '@design-assets/core/names';
 
 import { ExternalSvg, type AccessibleProps } from './external-svg.js';
-import {
-  resolveVersionTag,
-  useDesignAssets,
-} from './design-assets-provider.js';
+import { useResolvedAsset } from './asset-resolver.js';
 
 export type FlagProps = AccessibleProps & {
   countryCode: CountryCode;
@@ -25,25 +17,16 @@ export function Flag({
   versionTag: versionTagOverride,
   ...a11y
 }: FlagProps) {
-  const { baseUrl, versionTag, resolveHref } = useDesignAssets();
-  const entry = manifest[`flags/${countryCode}`];
-  const resolvedBaseUrl = baseUrlOverride ?? baseUrl;
-  const resolvedVersionTag = resolveVersionTag(versionTag, versionTagOverride);
-  const defaultHref = getFlagHref(countryCode, resolvedBaseUrl, resolvedVersionTag);
-  const href = resolveAssetHref(
-    {
-      category: 'flags',
-      name: countryCode,
-      baseUrl: resolvedBaseUrl,
-      versionTag: resolvedVersionTag,
-      defaultHref,
-    },
-    resolveHref,
-  );
+  const { href, viewBox } = useResolvedAsset({
+    category: 'flags',
+    name: countryCode,
+    baseUrl: baseUrlOverride,
+    versionTag: versionTagOverride,
+  });
 
   return (
     <ExternalSvg
-      viewBox={entry?.viewBox ?? '0 0 640 480'}
+      viewBox={viewBox}
       href={href}
       className={className}
       {...a11y}

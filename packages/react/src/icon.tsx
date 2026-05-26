@@ -1,15 +1,7 @@
-import {
-  getIconHref,
-  manifest,
-  resolveAssetHref,
-  type IconName,
-} from '@design-assets/core';
+import type { IconName } from '@design-assets/core/names';
 
 import { ExternalSvg, type AccessibleProps } from './external-svg.js';
-import {
-  resolveVersionTag,
-  useDesignAssets,
-} from './design-assets-provider.js';
+import { useResolvedAsset } from './asset-resolver.js';
 
 export type IconProps = AccessibleProps & {
   name: IconName;
@@ -25,25 +17,16 @@ export function Icon({
   versionTag: versionTagOverride,
   ...a11y
 }: IconProps) {
-  const { baseUrl, versionTag, resolveHref } = useDesignAssets();
-  const entry = manifest[`icons/${name}`];
-  const resolvedBaseUrl = baseUrlOverride ?? baseUrl;
-  const resolvedVersionTag = resolveVersionTag(versionTag, versionTagOverride);
-  const defaultHref = getIconHref(name, resolvedBaseUrl, resolvedVersionTag);
-  const href = resolveAssetHref(
-    {
-      category: 'icons',
-      name,
-      baseUrl: resolvedBaseUrl,
-      versionTag: resolvedVersionTag,
-      defaultHref,
-    },
-    resolveHref,
-  );
+  const { href, viewBox } = useResolvedAsset({
+    category: 'icons',
+    name,
+    baseUrl: baseUrlOverride,
+    versionTag: versionTagOverride,
+  });
 
   return (
     <ExternalSvg
-      viewBox={entry?.viewBox ?? '0 0 24 24'}
+      viewBox={viewBox}
       href={href}
       className={className}
       {...a11y}

@@ -13,12 +13,18 @@ export {
 export type { AssetManifest, ManifestEntry } from '../generated/manifest.js';
 export {
   buildAssetHref,
+  buildAssetUrl,
   resolveAssetHref,
   getIconHref,
+  getIconUrl,
   getPictogramHref,
+  getPictogramUrl,
   getIllustrationHref,
+  getIllustrationUrl,
   getBrandAssetHref,
+  getBrandAssetUrl,
   getFlagHref,
+  getFlagUrl,
   type AssetHrefResolver,
   type AssetHrefResolverContext,
 } from './href.js';

@@ -9,12 +9,12 @@ import { triangleIconInline } from '../../../../core/generated/inline/icons/tria
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-triangle',
+  selector: 'design-asset-icon-triangle',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

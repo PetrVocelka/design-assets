@@ -5,21 +5,16 @@ import {
   inject,
   input,
 } from '@angular/core';
-import {
-  getBrandAssetHref,
-  manifest,
-  type BrandAssetName,
-} from '@design-assets/core';
+import type { BrandAssetName } from '@design-assets/core/names';
 
 import { resolveA11yInputs } from './a11y';
 import {
   DESIGN_ASSETS_CONFIG,
-  resolveConfiguredHref,
-  resolveVersionTag,
 } from './design-assets-config';
+import { resolveAssetUseHref, resolveAssetViewBox } from './asset-resolver';
 
 @Component({
-  selector: 'da-ng-brand-asset',
+  selector: 'design-asset-brand',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -46,23 +41,18 @@ export class BrandAssetComponent {
   private readonly config = inject(DESIGN_ASSETS_CONFIG);
 
   protected readonly viewBox = computed(
-    () => manifest[`brand/${this.name()}`]?.viewBox ?? '0 0 64 64',
+    () => resolveAssetViewBox('brand'),
   );
 
-  protected readonly href = computed(() => {
-    const name = this.name();
-    const baseUrl = this.baseUrl() ?? this.config.baseUrl;
-    const versionTag = resolveVersionTag(this.config.versionTag, this.versionTag());
-    const defaultHref = getBrandAssetHref(name, baseUrl, versionTag);
-
-    return resolveConfiguredHref(this.config, {
-      category: 'brand',
-      name,
-      baseUrl,
-      versionTag,
-      defaultHref,
-    });
-  });
+  protected readonly href = computed(() =>
+    resolveAssetUseHref(
+      this.config,
+      'brand',
+      this.name(),
+      this.baseUrl(),
+      this.versionTag(),
+    ),
+  );
 
   protected readonly a11y = computed(() =>
     resolveA11yInputs(this.decorative(), this.ariaLabel()),

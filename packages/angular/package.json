@@ -1,7 +1,7 @@
 {
   "name": "@design-assets/angular",
   "version": "0.1.0",
-  "description": "Angular wrappers for enterprise design assets: external-file and inline entrypoints.",
+  "description": "Angular standalone renderers for typed SVG design assets with versioned external URLs and inline components.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -32,11 +32,10 @@
   "peerDependencies": {
     "@angular/common": ">=19",
     "@angular/core": ">=19",
-    "@design-assets/core": "workspace:*",
+    "@design-assets/core": "0.1.0",
     "rxjs": "^7.8.0"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*",
     "tslib": "^2.8.1"
   },
   "devDependencies": {

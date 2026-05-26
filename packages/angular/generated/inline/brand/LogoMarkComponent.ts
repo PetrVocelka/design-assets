@@ -9,12 +9,12 @@ import { logoMarkBrandInline } from '../../../../core/generated/inline/brand/log
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-logo-mark',
+  selector: 'design-asset-brand-logo-mark',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

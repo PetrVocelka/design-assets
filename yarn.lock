@@ -594,7 +594,6 @@ __metadata:
     "@angular/compiler-cli": "npm:^19.2.0"
     "@angular/core": "npm:^19.2.0"
     "@angular/platform-browser": "npm:^19.2.0"
-    "@design-assets/core": "workspace:*"
     "@design-assets/eslint-config": "workspace:*"
     "@design-assets/typescript-config": "workspace:*"
     eslint: "npm:^9.28.0"
@@ -609,12 +608,12 @@ __metadata:
   peerDependencies:
     "@angular/common": ">=19"
     "@angular/core": ">=19"
-    "@design-assets/core": "workspace:*"
+    "@design-assets/core": 0.1.0
     rxjs: ^7.8.0
   languageName: unknown
   linkType: soft
 
-"@design-assets/core@workspace:*, @design-assets/core@workspace:packages/core":
+"@design-assets/core@npm:0.1.0, @design-assets/core@workspace:*, @design-assets/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@design-assets/core@workspace:packages/core"
   dependencies:
@@ -732,7 +731,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@design-assets/react@workspace:packages/react"
   dependencies:
-    "@design-assets/core": "workspace:*"
+    "@design-assets/core": "npm:0.1.0"
     "@design-assets/eslint-config": "workspace:*"
     "@design-assets/typescript-config": "workspace:*"
     "@testing-library/dom": "npm:^10.4.0"
@@ -749,7 +748,7 @@ __metadata:
     typescript: "npm:^5.8.3"
     vitest: "npm:^3.2.1"
   peerDependencies:
-    "@design-assets/core": "workspace:*"
+    "@design-assets/core": 0.1.0
     react: ">=18"
   languageName: unknown
   linkType: soft
@@ -770,7 +769,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@design-assets/web-components@workspace:packages/web-components"
   dependencies:
-    "@design-assets/core": "workspace:*"
+    "@design-assets/core": "npm:0.1.0"
     "@design-assets/eslint-config": "workspace:*"
     "@design-assets/typescript-config": "workspace:*"
     eslint: "npm:^9.28.0"

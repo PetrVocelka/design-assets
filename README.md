@@ -1,8 +1,20 @@
 # Design Assets
 
-Portable, type-safe design asset infrastructure for large product teams. This is not only an icon package: it combines generated SVG assets, metadata, framework adapters, copy/deployment recipes, Storybook documentation, validation, and release governance.
+Vendor-neutral SVG asset pipeline that generates typed assets, Angular/React renderers, critical inline icons, versioned external URLs, and Storybook docs.
 
-The default delivery mode is per-asset static SVG files rendered through `<use href="/design-assets/icons/square.svg?v=0.1.0#asset" />`. That keeps SVG path data out of JavaScript, preserves `currentColor`, avoids DOM duplication, and works well for SSG/prerendered apps with thousands of pages.
+Design Assets turns your own SVG files into a small design-system asset surface: typed names, generated public SVG files, framework adapters, inline escape hatches, validation, and a living Storybook catalog. Product code stays independent of any icon vendor while still getting predictable rendering and cache-busting behavior.
+
+The default delivery mode is per-asset static SVG files rendered through `<use href="/design-assets/icons/square.svg?v=0.1.0#asset" />`. That keeps SVG path data out of JavaScript, preserves `currentColor`, avoids DOM duplication, and works well for SSG/prerendered apps with many pages.
+
+## Why
+
+- Typed asset names instead of fragile string paths.
+- Vendor-neutral source pipeline: bring your own SVGs and validation rules.
+- Angular, React, and Web Component renderers from the same asset source.
+- Inline rendering for critical UI chrome where zero extra requests matter.
+- External `use` and `img` rendering for repeatable, cacheable non-critical assets.
+- Versioned external URLs without prescribing a specific hosting or CDN provider.
+- Storybook docs that double as the visual asset catalog.
 
 ## Quick Start
 
@@ -35,6 +47,14 @@ export function App() {
 
 The runtime packages do not depend on Tailwind or ship default sizes. Add sizing through your app's CSS, design tokens, Tailwind utilities, or a wrapper component. See [`docs/sizing.md`](docs/sizing.md) and [`docs/consumer-setup.md`](docs/consumer-setup.md).
 
+## Render Mode Guide
+
+| Mode | Use For | Why |
+| --- | --- | --- |
+| `inline` | Logos, primary navigation, theme switchers, and other above-the-fold critical icons. | No request and no flash; path data is duplicated per render, so keep it selective. |
+| `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
+| `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
+
 ## Packages
 
 | Package | Purpose |
@@ -58,7 +78,7 @@ import { manifest } from '@design-assets/core/manifest';
 
 Do not import raw internal source files from `src/` or unversioned asset paths. Use package exports so the manifest, versioning, accessibility rules, and generated `viewBox` data stay in sync.
 
-## Delivery Modes
+## Delivery Examples
 
 External-file mode is the default:
 
@@ -77,6 +97,16 @@ import { LogoMark } from '@design-assets/react/inline';
 
 <LogoMark ariaLabel="Design Assets" className="h-6 w-auto" />;
 ```
+
+Angular generated inline selectors name the asset directly:
+
+```html
+<design-asset-icon-square />
+<design-asset-brand-logo-mark />
+<design-asset-flag-cz />
+```
+
+Keep render mode out of generated inline selector names. Use the generic `design-asset-use` or `design-asset-img` components when a view needs to choose delivery mode dynamically.
 
 Use inline sparingly because it duplicates SVG markup in the DOM on every render.
 Even though generated inline exports exist for every category in this case study, treat them as an ATF escape hatch. Large catalogs such as the full flag set should normally stay in external-file mode and be cached by the browser per SVG file.

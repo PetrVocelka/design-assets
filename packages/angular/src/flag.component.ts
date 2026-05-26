@@ -5,17 +5,16 @@ import {
   inject,
   input,
 } from '@angular/core';
-import { getFlagHref, manifest, type CountryCode } from '@design-assets/core';
+import type { CountryCode } from '@design-assets/core/names';
 
 import { resolveA11yInputs } from './a11y';
 import {
   DESIGN_ASSETS_CONFIG,
-  resolveConfiguredHref,
-  resolveVersionTag,
 } from './design-assets-config';
+import { resolveAssetUseHref, resolveAssetViewBox } from './asset-resolver';
 
 @Component({
-  selector: 'da-ng-flag',
+  selector: 'design-asset-flag',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -42,23 +41,18 @@ export class FlagComponent {
   private readonly config = inject(DESIGN_ASSETS_CONFIG);
 
   protected readonly viewBox = computed(
-    () => manifest[`flags/${this.countryCode()}`]?.viewBox ?? '0 0 640 480',
+    () => resolveAssetViewBox('flags'),
   );
 
-  protected readonly href = computed(() => {
-    const name = this.countryCode();
-    const baseUrl = this.baseUrl() ?? this.config.baseUrl;
-    const versionTag = resolveVersionTag(this.config.versionTag, this.versionTag());
-    const defaultHref = getFlagHref(name, baseUrl, versionTag);
-
-    return resolveConfiguredHref(this.config, {
-      category: 'flags',
-      name,
-      baseUrl,
-      versionTag,
-      defaultHref,
-    });
-  });
+  protected readonly href = computed(() =>
+    resolveAssetUseHref(
+      this.config,
+      'flags',
+      this.countryCode(),
+      this.baseUrl(),
+      this.versionTag(),
+    ),
+  );
 
   protected readonly a11y = computed(() =>
     resolveA11yInputs(this.decorative(), this.ariaLabel()),

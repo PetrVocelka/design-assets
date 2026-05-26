@@ -1,7 +1,7 @@
 {
   "name": "@design-assets/react",
   "version": "0.1.0",
-  "description": "React wrappers for enterprise design assets: external-file and inline entrypoints.",
+  "description": "React renderers for typed SVG design assets with external use/img modes and critical inline components.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -26,11 +26,11 @@
     "lint": "eslint src --ext .ts,.tsx"
   },
   "peerDependencies": {
-    "@design-assets/core": "workspace:*",
+    "@design-assets/core": "0.1.0",
     "react": ">=18"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*"
+    "@design-assets/core": "0.1.0"
   },
   "devDependencies": {
     "@design-assets/eslint-config": "workspace:*",

@@ -9,16 +9,18 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - run: corepack enable
+
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: yarn
+          cache-dependency-path: yarn.lock
 
-      - run: corepack enable
       - run: yarn install --immutable
 
       - run: yarn generate
@@ -27,11 +29,11 @@ jobs:
             || (echo "Generated files are stale. Run yarn generate." && exit 1)
 
       - run: yarn validate
-      - run: yarn typecheck
-      - run: yarn test
+      - run: yarn typecheck --concurrency=1
+      - run: yarn test --concurrency=1
 
       - name: Install Playwright browsers
         run: yarn workspace @design-assets/demo-react exec playwright install chromium webkit
 
-      - run: yarn test:e2e
-      - run: yarn build
+      - run: yarn test:e2e --concurrency=1
+      - run: yarn build --concurrency=1

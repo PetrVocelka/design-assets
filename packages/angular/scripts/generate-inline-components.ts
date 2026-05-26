@@ -25,14 +25,14 @@ function componentName(category: string, assetName: string): string {
 }
 
 function selector(category: string, assetName: string): string {
-  if (category === 'brand') return `da-ng-${assetName}`;
-  if (category === 'flags') return `da-ng-flag-${assetName}`;
+  if (category === 'brand') return `design-asset-brand-${assetName}`;
+  if (category === 'flags') return `design-asset-flag-${assetName}`;
   const prefix: Record<string, string> = {
-    icons: 'da-ng',
-    pictograms: 'da-ng',
-    illustrations: 'da-ng',
+    icons: 'design-asset-icon',
+    pictograms: 'design-asset-pictogram',
+    illustrations: 'design-asset-illustration',
   };
-  return `${prefix[category] ?? 'da-ng'}-${assetName}`;
+  return `${prefix[category] ?? 'design-asset'}-${assetName}`;
 }
 
 function inlineImportName(category: string, assetName: string): string {
@@ -100,7 +100,7 @@ import { InlineAssetComponent } from '../inline-asset.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: \`
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

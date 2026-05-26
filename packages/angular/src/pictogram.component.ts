@@ -5,21 +5,16 @@ import {
   inject,
   input,
 } from '@angular/core';
-import {
-  getPictogramHref,
-  manifest,
-  type PictogramName,
-} from '@design-assets/core';
+import type { PictogramName } from '@design-assets/core/names';
 
 import { resolveA11yInputs } from './a11y';
 import {
   DESIGN_ASSETS_CONFIG,
-  resolveConfiguredHref,
-  resolveVersionTag,
 } from './design-assets-config';
+import { resolveAssetUseHref, resolveAssetViewBox } from './asset-resolver';
 
 @Component({
-  selector: 'da-ng-pictogram',
+  selector: 'design-asset-pictogram',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -46,23 +41,18 @@ export class PictogramComponent {
   private readonly config = inject(DESIGN_ASSETS_CONFIG);
 
   protected readonly viewBox = computed(
-    () => manifest[`pictograms/${this.name()}`]?.viewBox ?? '0 0 48 48',
+    () => resolveAssetViewBox('pictograms'),
   );
 
-  protected readonly href = computed(() => {
-    const name = this.name();
-    const baseUrl = this.baseUrl() ?? this.config.baseUrl;
-    const versionTag = resolveVersionTag(this.config.versionTag, this.versionTag());
-    const defaultHref = getPictogramHref(name, baseUrl, versionTag);
-
-    return resolveConfiguredHref(this.config, {
-      category: 'pictograms',
-      name,
-      baseUrl,
-      versionTag,
-      defaultHref,
-    });
-  });
+  protected readonly href = computed(() =>
+    resolveAssetUseHref(
+      this.config,
+      'pictograms',
+      this.name(),
+      this.baseUrl(),
+      this.versionTag(),
+    ),
+  );
 
   protected readonly a11y = computed(() =>
     resolveA11yInputs(this.decorative(), this.ariaLabel()),

@@ -18,14 +18,14 @@ import { IconComponent, PictogramComponent } from '@design-assets/angular';
         <h2>Icons</h2>
         <div class="icon-grid">
           @for (name of icons; track name) {
-            <da-ng-icon [name]="name" class="icon" decorative />
+            <design-asset-icon [name]="name" class="icon" decorative />
           }
         </div>
       </section>
 
       <section>
         <h2>Pictogram</h2>
-        <da-ng-pictogram name="school" class="pictogram" decorative />
+        <design-asset-pictogram name="school" class="pictogram" decorative />
       </section>
     </main>
   `,

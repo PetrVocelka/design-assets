@@ -9,12 +9,12 @@ import { excelTablePictogramInline } from '../../../../core/generated/inline/pic
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-excel-table',
+  selector: 'design-asset-pictogram-excel-table',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"

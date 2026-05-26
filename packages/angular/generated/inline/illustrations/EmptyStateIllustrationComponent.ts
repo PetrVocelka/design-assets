@@ -9,12 +9,12 @@ import { emptyStateIllustrationInline } from '../../../../core/generated/inline/
 import { InlineAssetComponent } from '../inline-asset.component';
 
 @Component({
-  selector: 'da-ng-empty-state',
+  selector: 'design-asset-illustration-empty-state',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InlineAssetComponent],
   template: `
-    <da-ng-inline-asset
+    <design-asset-inline
       [spec]="spec"
       [class]="className()"
       [decorative]="decorative()"
