@@ -2,7 +2,7 @@ import {
   buildAssetHref,
   buildAssetUrl,
   resolveAssetHref,
-} from '@design-assets/core/href';
+} from '@petrvocelka/design-assets-core/href';
 import type {
   AssetCategory,
   BrandAssetName,
@@ -10,7 +10,7 @@ import type {
   IconName,
   IllustrationName,
   PictogramName,
-} from '@design-assets/core/names';
+} from '@petrvocelka/design-assets-core/names';
 
 import { resolveVersionTag, useDesignAssets } from './design-assets-provider.js';
 

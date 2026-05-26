@@ -14,14 +14,14 @@ import {
   Icon,
   Illustration,
   Pictogram,
-} from '@design-assets/react';
+} from '@petrvocelka/design-assets-react';
 import { ICON_SIZE_PRESETS } from '@design-assets/tailwind-preset/icon-sizes';
 import {
   FlagCZ,
   LogoMark,
   CircleIcon,
   SquareIcon,
-} from '@design-assets/react/inline';
+} from '@petrvocelka/design-assets-react/inline';
 
 const REGIONS = [
   { code: 'cz' as const, label: 'Czech Republic' },
@@ -38,7 +38,7 @@ const ARTICLES = [
 
 export function App() {
   return (
-    <DesignAssetsProvider baseUrl="/design-assets">
+    <DesignAssetsProvider baseUrl="design-assets">
       <div className="min-h-screen">
         {/* ATF nav — inline for zero HTTP on logo + primary actions */}
         <header className="border-b border-slate-200 bg-white px-6 py-4">
@@ -149,7 +149,7 @@ export function App() {
               </div>
               <div data-testid="img-icon">
                 <img
-                  src="/design-assets/icons/square.svg"
+                  src="design-assets/icons/square.svg"
                   alt=""
                   className="size-8 text-blue-600"
                 />

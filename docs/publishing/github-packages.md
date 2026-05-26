@@ -4,13 +4,13 @@ This project is designed to publish versioned packages from a platform/design-sy
 
 ## Package scope
 
-For this case study the packages use the `@design-assets/*` scope:
+For this public case study the packages publish under the author's GitHub scope:
 
 ```txt
-@design-assets/core
-@design-assets/react
-@design-assets/angular
-@design-assets/web-components
+@petrvocelka/design-assets-core
+@petrvocelka/design-assets-react
+@petrvocelka/design-assets-angular
+@petrvocelka/design-assets-web-components
 ```
 
 The Tailwind preset in this repository is private docs/demo tooling, not a runtime package that consumers need to install.
@@ -31,14 +31,20 @@ or keep the nested namespace if your registry policy supports it:
 
 ## Registry configuration
 
-Create an `.npmrc` for GitHub Packages:
+This repo uses Yarn 4, so registry mapping belongs in `.yarnrc.yml` rather than `.npmrc`:
 
-```ini
-@design-assets:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```yaml
+npmScopes:
+  petrvocelka:
+    npmRegistryServer: "https://npm.pkg.github.com"
+    npmPublishRegistry: "https://npm.pkg.github.com"
+    npmAlwaysAuth: true
+    npmAuthToken: "${NODE_AUTH_TOKEN:-}"
 ```
 
-For a company scope, replace `@design-assets` with your organization scope.
+For a company scope, replace `petrvocelka` with your organization scope without the leading `@`.
+
+GitHub Packages expects the npm scope to match the GitHub user or organization that owns the package namespace. This repo intentionally uses `@petrvocelka/*` for the public playground packages; if the project later moves to an organization, rename the packages and Yarn scope mapping together.
 
 ## Release flow
 
@@ -46,18 +52,18 @@ Use Changesets for versioning:
 
 ```bash
 yarn changeset
-yarn changeset version
-yarn generate
+yarn version-packages
 yarn validate
-yarn lint
-yarn typecheck
-yarn test
-yarn test:e2e
-yarn build
-yarn changeset publish
+yarn typecheck --concurrency=1
+yarn test --concurrency=1
+yarn test:e2e --concurrency=1
+yarn build --concurrency=1
+yarn release
 ```
 
-`yarn generate` must run after `yarn changeset version` so `packages/core/generated/version.ts` matches the package version being published.
+`yarn version-packages` runs `changeset version` and then `yarn generate` so `packages/core/generated/version.ts` matches the package version being published.
+
+The four public packages are configured as a fixed Changesets group so the generated asset core and framework adapters move together. Framework adapters declare the core peer range as `>=0.1.0 <1`; Changesets is configured to avoid artificial peer-dependent major bumps while the next core version remains inside that range.
 
 ## GitHub Actions release workflow
 
@@ -80,46 +86,56 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
         with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com
+          fetch-depth: 0
 
-      - name: Enable Corepack
-        run: corepack enable
+      - run: corepack enable
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: yarn
+          cache-dependency-path: yarn.lock
+          registry-url: https://npm.pkg.github.com
+          scope: '@petrvocelka'
 
       - name: Install
         run: yarn install --immutable
 
-      - name: Install Playwright browsers
-        run: yarn workspace @design-assets/demo-react playwright install --with-deps chromium webkit
-
       - name: Generate
         run: yarn generate
+
+      - name: Check generated files
+        run: |
+          git diff --exit-code packages/core/generated packages/react/generated packages/angular/generated \
+            || (echo "Generated files are stale. Run yarn generate." && exit 1)
 
       - name: Validate
         run: yarn validate
 
-      - name: Lint
-        run: yarn lint
-
       - name: Typecheck
-        run: yarn typecheck
+        run: yarn typecheck --concurrency=1
 
       - name: Test
-        run: yarn test
+        run: yarn test --concurrency=1
+
+      - name: Install Playwright browsers
+        run: yarn workspace @design-assets/demo-react exec playwright install --with-deps chromium webkit
 
       - name: E2E
-        run: yarn test:e2e
+        run: yarn test:e2e --concurrency=1
 
       - name: Build
-        run: yarn build
+        run: yarn build --concurrency=1
 
-      - name: Publish
-        run: yarn changeset publish
+      - name: Create version PR or publish
+        uses: changesets/action@v1.8.0
+        with:
+          version: yarn version-packages
+          publish: yarn release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
@@ -134,17 +150,19 @@ Depending on your GitHub Packages policy, use one of:
 
 ## Consumer installation
 
-Consumers also need registry configuration:
+Consumers using Yarn 4 also need registry configuration:
 
-```ini
-@design-assets:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```yaml
+npmScopes:
+  petrvocelka:
+    npmRegistryServer: "https://npm.pkg.github.com"
+    npmAuthToken: "${NODE_AUTH_TOKEN:-}"
 ```
 
 Then:
 
 ```bash
-yarn add @design-assets/core @design-assets/react
+yarn add @petrvocelka/design-assets-core @petrvocelka/design-assets-react
 ```
 
 ## Release notes

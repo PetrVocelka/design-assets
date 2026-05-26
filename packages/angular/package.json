@@ -1,5 +1,5 @@
 {
-  "name": "@design-assets/angular",
+  "name": "@petrvocelka/design-assets-angular",
   "version": "0.1.0",
   "description": "Angular standalone renderers for typed SVG design assets with versioned external URLs and inline components.",
   "license": "MIT",
@@ -32,7 +32,7 @@
   "peerDependencies": {
     "@angular/common": ">=19",
     "@angular/core": ">=19",
-    "@design-assets/core": "0.1.0",
+    "@petrvocelka/design-assets-core": ">=0.1.0 <1",
     "rxjs": "^7.8.0"
   },
   "dependencies": {

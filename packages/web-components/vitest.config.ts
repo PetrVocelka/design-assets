@@ -7,7 +7,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@design-assets/core': resolve(__dirname, '../core/src/index.ts'),
+      '@petrvocelka/design-assets-core': resolve(__dirname, '../core/src/index.ts'),
     },
   },
 });

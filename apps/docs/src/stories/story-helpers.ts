@@ -1,5 +1,5 @@
 import { createElement, type ComponentType } from 'react';
-import { manifest } from '@design-assets/core';
+import { manifest } from '@petrvocelka/design-assets-core';
 
 export function manifestNames(category: string): string[] {
   return Object.values(manifest)

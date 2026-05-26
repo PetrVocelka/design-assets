@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import type { CountryCode } from '@design-assets/core';
-import { Flag } from '@design-assets/react';
+import type { CountryCode } from '@petrvocelka/design-assets-core';
+import { Flag } from '@petrvocelka/design-assets-react';
 import { createComponentStories, getFlagHref } from './create-component-stories';
 import { FLAG_SIZE_PRESETS, manifestNames } from './story-helpers';
 

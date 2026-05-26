@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { BrandAsset } from '@design-assets/react';
+import { BrandAsset } from '@petrvocelka/design-assets-react';
 import { createComponentStories, getBrandAssetHref } from './create-component-stories';
 import { BRAND_SIZE_PRESETS, manifestNames } from './story-helpers';
 import { ThemedAssetExample } from './themed-asset-example';

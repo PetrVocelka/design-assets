@@ -1,6 +1,6 @@
 import type { ComponentType, ReactNode } from 'react';
-import { DesignAssetImg } from '@design-assets/react';
-import * as InlineAssets from '@design-assets/react/inline';
+import { DesignAssetImg } from '@petrvocelka/design-assets-react';
+import * as InlineAssets from '@petrvocelka/design-assets-react/inline';
 import {
   inlineComponentName,
   ShowcaseShell,
@@ -58,24 +58,37 @@ function reactSnippet(
   className: string,
 ): string {
   const nameProp = config.nameProp ?? 'name';
-  const propAssignment = `${nameProp}="${name}"`;
+  const a11yProps = decorative ? [] : [`ariaLabel="${ariaLabel}"`];
+  const renderComponent = (component: string, props: string[]): string =>
+    `<${component}\n${props.map((prop) => `  ${prop}`).join('\n')}\n/>`;
 
   if (renderMode === 'inline') {
     const component = inlineComponentName(config.inlineCategory, name);
-    return decorative
-      ? `import { ${component} } from '@design-assets/react/inline';\n\n<${component} className="${className}" />`
-      : `import { ${component} } from '@design-assets/react/inline';\n\n<${component} ariaLabel="${ariaLabel}" className="${className}" />`;
+    return `import { ${component} } from '@petrvocelka/design-assets-react/inline';
+
+${renderComponent(component, [...a11yProps, `className="${className}"`])}`;
   }
 
   if (renderMode === 'img') {
-    return decorative
-      ? `import { DesignAssetImg } from '@design-assets/react';\n\n<DesignAssetImg category="${config.assetCategory}" name="${name}" className="${className}" />`
-      : `import { DesignAssetImg } from '@design-assets/react';\n\n<DesignAssetImg category="${config.assetCategory}" name="${name}" ariaLabel="${ariaLabel}" className="${className}" />`;
+    return `import { DesignAssetImg } from '@petrvocelka/design-assets-react';
+
+${renderComponent(
+  'DesignAssetImg',
+  [
+    `category="${config.assetCategory}"`,
+    `name="${name}"`,
+    ...a11yProps,
+    `className="${className}"`,
+  ],
+)}`;
   }
 
-  return decorative
-    ? `import { ${config.reactExport} } from '@design-assets/react';\n\n<${config.reactExport} ${propAssignment} className="${className}" />`
-    : `import { ${config.reactExport} } from '@design-assets/react';\n\n<${config.reactExport} ${propAssignment} ariaLabel="${ariaLabel}" className="${className}" />`;
+  return `import { ${config.reactExport} } from '@petrvocelka/design-assets-react';
+
+${renderComponent(
+  config.reactExport,
+  [`${nameProp}="${name}"`, ...a11yProps, `className="${className}"`],
+)}`;
 }
 
 export function createReactAssetShowcase(config: ReactAssetShowcaseConfig) {

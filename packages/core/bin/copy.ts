@@ -19,7 +19,7 @@ async function resolveCoreRoot(): Promise<string> {
     }
   }
   throw new Error(
-    'Could not locate packages/core/generated/svg. Run: yarn workspace @design-assets/core generate',
+    'Could not locate packages/core/generated/svg. Run: yarn workspace @petrvocelka/design-assets-core generate',
   );
 }
 
@@ -108,7 +108,7 @@ export async function runCopy(options: CopyOptions): Promise<void> {
     await stat(GENERATED_SVG);
   } catch {
     throw new Error(
-      'Generated SVG files not found. Run: yarn workspace @design-assets/core generate',
+      'Generated SVG files not found. Run: yarn workspace @petrvocelka/design-assets-core generate',
     );
   }
 

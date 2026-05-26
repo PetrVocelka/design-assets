@@ -31,7 +31,7 @@ describe('generic Angular asset rendering modes', () => {
     for (const file of productionRendererFiles) {
       const source = sourceText(file);
       expect(source, file).not.toMatch(/\bmanifest\b/);
-      expect(source, file).not.toContain("from '@design-assets/core'");
+      expect(source, file).not.toContain("from '@petrvocelka/design-assets-core'");
     }
   });
 

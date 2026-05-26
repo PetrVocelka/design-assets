@@ -27,12 +27,12 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
           cache: yarn
           cache-dependency-path: yarn.lock
 
       - run: yarn install --immutable
-      - run: yarn build --concurrency=1
+      - run: yarn build:pages
 
       - uses: actions/configure-pages@v6
         with:
@@ -40,7 +40,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: apps/docs/storybook-static
+          path: pages-dist
 
       - id: deployment
         uses: actions/deploy-pages@v5

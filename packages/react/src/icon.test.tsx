@@ -1,7 +1,7 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 
-import { ASSETS_VERSION } from '@design-assets/core';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core';
 import { DesignAssetsProvider } from './design-assets-provider.js';
 import { Flag } from './flag.js';
 import { Icon } from './icon.js';

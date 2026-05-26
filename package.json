@@ -7,15 +7,20 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:pages": "yarn workspace @design-assets/demo-react build && yarn workspace @design-assets/docs build && node scripts/build-pages.mjs",
     "lint": "turbo run lint --continue",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
     "test:e2e": "turbo run test:e2e",
     "generate": "turbo run generate",
     "validate": "turbo run validate",
-    "design-assets": "yarn workspace @design-assets/core design-assets"
+    "changeset": "changeset",
+    "version-packages": "changeset version && yarn generate",
+    "release": "changeset publish",
+    "design-assets": "yarn workspace @petrvocelka/design-assets-core design-assets"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@design-assets/eslint-config": "workspace:*",
     "turbo": "^2.5.4"
   },

@@ -1,8 +1,8 @@
-import { ASSETS_VERSION } from '@design-assets/core';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core';
 import { afterEach, describe, expect, it } from 'vitest';
 
 import { defineDesignAssetsElements } from './register.js';
-import { DaIconElement } from './elements.js';
+import { DaAssetImgElement, DaAssetUseElement, DaIconElement } from './elements.js';
 import { configureDesignAssets } from './config.js';
 
 describe('da-icon', () => {
@@ -46,6 +46,37 @@ describe('da-icon', () => {
     expect(useEl?.getAttribute('href')).toMatch(
       new RegExp(`/design-assets/icons/square\\.svg\\?v=${ASSETS_VERSION}#asset$`),
     );
+  });
+
+  it('registers generic use and img primitives', async () => {
+    defineDesignAssetsElements({ categories: ['primitives'] });
+    await customElements.whenDefined('da-asset-use');
+    await customElements.whenDefined('da-asset-img');
+
+    const useEl = document.createElement('da-asset-use') as DaAssetUseElement;
+    useEl.category = 'flags';
+    useEl.name = 'cz';
+    useEl.setAttribute('aria-label', 'Czech Republic');
+    document.body.appendChild(useEl);
+    await useEl.updateComplete;
+
+    expect(useEl.querySelector('svg')?.getAttribute('viewBox')).toBe('0 0 640 480');
+    expect(useEl.querySelector('use')?.getAttribute('href')).toMatch(
+      new RegExp(`/design-assets/flags/cz\\.svg\\?v=${ASSETS_VERSION}#asset$`),
+    );
+
+    const imgEl = document.createElement('da-asset-img') as DaAssetImgElement;
+    imgEl.category = 'flags';
+    imgEl.name = 'cz';
+    imgEl.setAttribute('aria-label', 'Czech Republic');
+    document.body.appendChild(imgEl);
+    await imgEl.updateComplete;
+
+    const img = imgEl.querySelector('img');
+    expect(img?.getAttribute('src')).toBe(`/design-assets/flags/cz.svg?v=${ASSETS_VERSION}`);
+    expect(img?.getAttribute('alt')).toBe('Czech Republic');
+    expect(img?.getAttribute('loading')).toBe('lazy');
+    expect(img?.getAttribute('decoding')).toBe('async');
   });
 
   it('supports custom href resolution for consumer-owned flag assets', async () => {

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "yarn copy:assets",
-    "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/demo-angular/public/design-assets",
+    "copy:assets": "yarn workspace @petrvocelka/design-assets-core generate && yarn workspace @petrvocelka/design-assets-core design-assets copy ../../apps/demo-angular/public/design-assets",
     "dev": "yarn copy:assets && ng serve --port 4200",
     "prebuild": "yarn copy:assets",
     "build": "ng build",
@@ -16,8 +16,8 @@
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
     "@angular/platform-browser": "^19.2.0",
-    "@design-assets/angular": "workspace:*",
-    "@design-assets/core": "workspace:*",
+    "@petrvocelka/design-assets-angular": "workspace:*",
+    "@petrvocelka/design-assets-core": "workspace:*",
     "rxjs": "^7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "^0.15.0"

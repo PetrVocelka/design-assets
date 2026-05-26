@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import { DesignAssetsProvider } from '@design-assets/react';
+import { DesignAssetsProvider } from '@petrvocelka/design-assets-react';
 import {
   configureDesignAssets,
   defineDesignAssetsElements,
-} from '@design-assets/web-components/register';
+} from '@petrvocelka/design-assets-web-components/register';
 import '../src/styles.css';
 
 const docsAssetBaseUrl = 'design-assets';

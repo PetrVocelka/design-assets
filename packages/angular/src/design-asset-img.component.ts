@@ -5,7 +5,7 @@ import {
   inject,
   input,
 } from '@angular/core';
-import type { AssetCategory } from '@design-assets/core/names';
+import type { AssetCategory } from '@petrvocelka/design-assets-core/names';
 
 import { resolveA11yInputs } from './a11y';
 import { DESIGN_ASSETS_CONFIG } from './design-assets-config';

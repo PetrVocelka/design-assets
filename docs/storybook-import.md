@@ -10,7 +10,7 @@ Run the library Storybook from this repository:
 yarn storybook
 ```
 
-The docs read from the generated `@design-assets/core` manifest, so galleries and metadata match the package version in the workspace.
+The docs read from the generated `@petrvocelka/design-assets-core` manifest, so galleries and metadata match the package version in the workspace.
 
 ## Consumer Storybook strategy
 
@@ -35,14 +35,14 @@ This keeps app Storybooks readable while still making the asset catalog discover
 The intended package contract is:
 
 ```ts
-import { designAssetsStories } from '@design-assets/react/storybook';
+import { designAssetsStories } from '@petrvocelka/design-assets-react/storybook';
 ```
 
 Consumer Storybook config can then compose the imported stories:
 
 ```ts
 import type { StorybookConfig } from '@storybook/react-vite';
-import { designAssetsStories } from '@design-assets/react/storybook';
+import { designAssetsStories } from '@petrvocelka/design-assets-react/storybook';
 
 const config: StorybookConfig = {
   stories: [
@@ -58,10 +58,10 @@ export default config;
 
 ## Manifest source of truth
 
-Imported docs should read the consumer-installed `@design-assets/core` manifest. That means:
+Imported docs should read the consumer-installed `@petrvocelka/design-assets-core` manifest. That means:
 
-- a consumer on `@design-assets/core@0.1.0` sees the `0.1.0` asset catalog
-- a consumer on `@design-assets/core@0.2.0` sees the `0.2.0` asset catalog
+- a consumer on `@petrvocelka/design-assets-core@0.1.0` sees the `0.1.0` asset catalog
+- a consumer on `@petrvocelka/design-assets-core@0.2.0` sees the `0.2.0` asset catalog
 - docs never drift from the installed package version
 
 Do not duplicate icon names, descriptions, deprecation notes, or categories in consumer docs.

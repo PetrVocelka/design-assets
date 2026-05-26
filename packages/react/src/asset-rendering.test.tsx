@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 
-import { ASSETS_VERSION } from '@design-assets/core';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core';
 
 import { DesignAssetImg } from './design-asset-img.js';
 import { DesignAssetUse } from './design-asset-use.js';
@@ -78,7 +78,7 @@ describe('generic asset rendering modes', () => {
     for (const file of productionRendererFiles) {
       const source = sourceText(file);
       expect(source, file).not.toMatch(/\bmanifest\b/);
-      expect(source, file).not.toContain("from '@design-assets/core'");
+      expect(source, file).not.toContain("from '@petrvocelka/design-assets-core'");
     }
   });
 });

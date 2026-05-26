@@ -2,10 +2,13 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "fixed": [],
+  "fixed": [["@petrvocelka/design-assets-core", "@petrvocelka/design-assets-react", "@petrvocelka/design-assets-angular", "@petrvocelka/design-assets-web-components"]],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@design-assets/docs", "@design-assets/demo-react", "@design-assets/demo-vanilla", "@design-assets/demo-angular"]
+  "ignore": ["@design-assets/docs", "@design-assets/demo-react", "@design-assets/demo-vanilla", "@design-assets/demo-angular"],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
 }

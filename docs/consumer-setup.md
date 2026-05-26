@@ -7,19 +7,19 @@ This guide shows how to consume `design-assets` from an application. The default
 React apps:
 
 ```bash
-yarn add @design-assets/core @design-assets/react
+yarn add @petrvocelka/design-assets-core @petrvocelka/design-assets-react
 ```
 
 Angular apps:
 
 ```bash
-yarn add @design-assets/core @design-assets/angular
+yarn add @petrvocelka/design-assets-core @petrvocelka/design-assets-angular
 ```
 
 Plain HTML or framework-agnostic apps:
 
 ```bash
-yarn add @design-assets/core @design-assets/web-components
+yarn add @petrvocelka/design-assets-core @petrvocelka/design-assets-web-components
 ```
 
 The runtime packages are styling-framework agnostic. They do not require Tailwind; Tailwind examples in this repository are docs/demo conveniences only.
@@ -66,7 +66,7 @@ See [`optional-categories.md`](optional-categories.md) for how this affects `man
 ## React
 
 ```tsx
-import { DesignAssetsProvider, Icon, Flag } from '@design-assets/react';
+import { DesignAssetsProvider, Icon, Flag } from '@petrvocelka/design-assets-react';
 
 export function App() {
   return (
@@ -87,7 +87,7 @@ Size and color are consumer-owned:
 Use the inline entrypoint only for above-the-fold assets where avoiding an extra request matters more than keeping path data out of the DOM:
 
 ```tsx
-import { LogoMark } from '@design-assets/react/inline';
+import { LogoMark } from '@petrvocelka/design-assets-react/inline';
 
 <LogoMark ariaLabel="Design Assets" />;
 ```
@@ -108,7 +108,7 @@ For dynamic rendering, use `design-asset-use` or `design-asset-img` instead of e
 
 ```ts
 import { Component } from '@angular/core';
-import { IconComponent, provideDesignAssets } from '@design-assets/angular';
+import { IconComponent, provideDesignAssets } from '@petrvocelka/design-assets-angular';
 
 @Component({
   selector: 'app-root',
@@ -128,7 +128,7 @@ export class AppComponent {}
   import {
     configureDesignAssets,
     defineDesignAssetsElements,
-  } from '@design-assets/web-components/register';
+  } from '@petrvocelka/design-assets-web-components/register';
 
   configureDesignAssets({ baseUrl: '/design-assets' });
   defineDesignAssetsElements({ categories: ['icons', 'flags'] });
@@ -207,7 +207,7 @@ The query string comes before `#asset` so browser and service-worker caches see 
 
 ## Versioning and cache busting
 
-`DesignAssetsProvider`, `provideDesignAssets`, and the web components registry default `versionTag` to `ASSETS_VERSION` from `@design-assets/core`.
+`DesignAssetsProvider`, `provideDesignAssets`, and the web components registry default `versionTag` to `ASSETS_VERSION` from `@petrvocelka/design-assets-core`.
 
 Default same-origin output:
 
@@ -231,14 +231,14 @@ If your deployment uses versioned paths, opt out of query-string cache busting:
 Consumers should import adapter APIs, not raw source SVGs:
 
 ```tsx
-import { Icon } from '@design-assets/react';
+import { Icon } from '@petrvocelka/design-assets-react';
 ```
 
 Avoid importing internal files:
 
 ```tsx
 // Do not do this.
-import square from '@design-assets/core/src/icons/square.svg';
+import square from '@petrvocelka/design-assets-core/src/icons/square.svg';
 ```
 
 Direct source imports bypass the manifest, versioning, accessibility props, generated `viewBox`, and deprecation metadata.

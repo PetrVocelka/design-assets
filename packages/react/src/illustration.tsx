@@ -1,4 +1,4 @@
-import type { IllustrationName } from '@design-assets/core/names';
+import type { IllustrationName } from '@petrvocelka/design-assets-core/names';
 
 import { ExternalSvg, type AccessibleProps } from './external-svg.js';
 import { useResolvedAsset } from './asset-resolver.js';

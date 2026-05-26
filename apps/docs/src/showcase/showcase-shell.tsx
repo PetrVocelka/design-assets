@@ -69,7 +69,7 @@ export const showcaseControlArgTypes = {
     name: 'Render mode',
     description: 'Asset delivery mode for the example.',
     control: { type: 'select' as const },
-    options: ['use', 'inline'],
+    options: ['use', 'img', 'inline'],
   },
   theme: {
     name: 'Background',

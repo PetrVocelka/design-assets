@@ -3,6 +3,8 @@ export type { DesignAssetsConfig } from './config.js';
 export { resolveAccessibility } from './a11y.js';
 export type { AccessibleProps } from './a11y.js';
 export {
+  DaAssetImgElement,
+  DaAssetUseElement,
   DaBrandAssetElement,
   DaFlagElement,
   DaIconElement,

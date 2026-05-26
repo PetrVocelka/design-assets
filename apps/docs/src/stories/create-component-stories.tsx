@@ -6,7 +6,7 @@ import {
   getIconHref,
   getIllustrationHref,
   getPictogramHref,
-} from '@design-assets/core';
+} from '@petrvocelka/design-assets-core';
 import { AngularAssetShowcase } from '../showcase/angular-asset-showcase';
 import { WcAssetShowcase } from '../showcase/wc-asset-showcase';
 import { createReactAssetShowcase } from '../showcase/react-asset-showcase';
@@ -57,8 +57,13 @@ export function createComponentStories(config: ComponentStoriesConfig) {
   });
 
   const nameArgKey = config.nameProp ?? 'name';
-  const renderModes = config.renderModes ?? (['use', 'inline'] satisfies RenderMode[]);
+  const renderModes = config.renderModes ?? (['use', 'img', 'inline'] satisfies RenderMode[]);
   const defaultRenderMode = config.defaultRenderMode ?? renderModes[0] ?? 'use';
+  const htmlRenderModes = renderModes.filter((mode) => mode !== 'inline') as Array<
+    Exclude<RenderMode, 'inline'>
+  >;
+  const defaultHtmlRenderMode =
+    defaultRenderMode === 'inline' ? (htmlRenderModes[0] ?? 'use') : defaultRenderMode;
 
   const meta = {
     parameters: {
@@ -145,11 +150,16 @@ export function createComponentStories(config: ComponentStoriesConfig) {
         ariaLabel={args.ariaLabel as string}
         sizePresets={config.sizePresets}
         intro={config.htmlIntro}
+        renderMode={args.renderMode as Exclude<RenderMode, 'inline'>}
       />
     ),
     argTypes: {
       [nameArgKey]: showcaseArgTypes[nameArgKey],
       size: showcaseArgTypes.size,
+      renderMode: {
+        ...showcaseControlArgTypes.renderMode,
+        options: htmlRenderModes,
+      },
       theme: showcaseControlArgTypes.theme,
       decorative: showcaseControlArgTypes.decorative,
       ariaLabel: showcaseControlArgTypes.ariaLabel,
@@ -157,6 +167,7 @@ export function createComponentStories(config: ComponentStoriesConfig) {
     args: {
       [nameArgKey]: config.defaultName,
       size: config.defaultSize,
+      renderMode: defaultHtmlRenderMode,
       theme: 'light',
       decorative: config.defaultDecorative,
       ariaLabel: config.defaultAriaLabel,
@@ -164,7 +175,7 @@ export function createComponentStories(config: ComponentStoriesConfig) {
     parameters: {
       docs: {
         description: {
-          story: 'Web components — `<da-*>` custom elements from `@design-assets/web-components`.',
+          story: 'Web components — `<da-*>` custom elements from `@petrvocelka/design-assets-web-components`.',
         },
       },
     },
@@ -182,11 +193,13 @@ export function createComponentStories(config: ComponentStoriesConfig) {
         ariaLabel={args.ariaLabel as string}
         sizePresets={config.sizePresets}
         intro={config.reactIntro}
+        renderMode={args.renderMode as RenderMode}
       />
     ),
     argTypes: {
       [nameArgKey]: showcaseArgTypes[nameArgKey],
       size: showcaseArgTypes.size,
+      renderMode: showcaseArgTypes.renderMode,
       theme: showcaseControlArgTypes.theme,
       decorative: showcaseControlArgTypes.decorative,
       ariaLabel: showcaseControlArgTypes.ariaLabel,
@@ -194,6 +207,7 @@ export function createComponentStories(config: ComponentStoriesConfig) {
     args: {
       [nameArgKey]: config.defaultName,
       size: config.defaultSize,
+      renderMode: defaultRenderMode,
       theme: 'light',
       decorative: config.defaultDecorative,
       ariaLabel: config.defaultAriaLabel,
@@ -201,7 +215,7 @@ export function createComponentStories(config: ComponentStoriesConfig) {
     parameters: {
       docs: {
         description: {
-          story: 'Typed Angular components from `@design-assets/angular` — see `apps/demo-angular`.',
+          story: 'Typed Angular components from `@petrvocelka/design-assets-angular` — see `apps/demo-angular`.',
         },
       },
     },

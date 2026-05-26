@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "predev": "yarn copy:assets",
-    "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/demo-react/public/design-assets",
+    "copy:assets": "yarn workspace @petrvocelka/design-assets-core generate && yarn workspace @petrvocelka/design-assets-core design-assets copy ../../apps/demo-react/public/design-assets",
     "dev": "yarn copy:assets && vite",
-    "prebuild": "yarn copy:assets",
-    "build": "vite build",
+    "build": "yarn copy:assets && vite build",
     "preview": "vite preview",
     "pretest:e2e": "yarn copy:assets && yarn build",
     "test:e2e": "playwright test",
@@ -16,8 +15,8 @@
     "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*",
-    "@design-assets/react": "workspace:*",
+    "@petrvocelka/design-assets-core": "workspace:*",
+    "@petrvocelka/design-assets-react": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

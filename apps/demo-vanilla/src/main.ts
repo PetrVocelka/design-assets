@@ -1,4 +1,4 @@
-import { defineDesignAssetsElements } from '@design-assets/web-components/register';
+import { defineDesignAssetsElements } from '@petrvocelka/design-assets-web-components/register';
 
 defineDesignAssetsElements();
 

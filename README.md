@@ -4,7 +4,17 @@ Vendor-neutral SVG asset pipeline that generates typed assets, Angular/React ren
 
 Design Assets turns your own SVG files into a small design-system asset surface: typed names, generated public SVG files, framework adapters, inline escape hatches, validation, and a living Storybook catalog. Product code stays independent of any icon vendor while still getting predictable rendering and cache-busting behavior.
 
+This is a public case-study library and release-engineering playground, not a v1 stability promise.
+
 The default delivery mode is per-asset static SVG files rendered through `<use href="/design-assets/icons/square.svg?v=0.1.0#asset" />`. That keeps SVG path data out of JavaScript, preserves `currentColor`, avoids DOM duplication, and works well for SSG/prerendered apps with many pages.
+
+## Live Demo
+
+- [Landing page](https://petrvocelka.github.io/design-assets/) explains the package surface.
+- [React demo](https://petrvocelka.github.io/design-assets/react/) shows a live framework integration.
+- [Storybook](https://petrvocelka.github.io/design-assets/storybook/) is the canonical catalog for assets, render modes, and usage examples.
+
+Storybook is the documentation source of truth. The framework demos are proof-of-use apps that show how the same generated assets behave in real application builds. Angular and Web Components demos live in this monorepo and are follow-up targets for the public Pages surface.
 
 ## Why
 
@@ -21,7 +31,7 @@ The default delivery mode is per-asset static SVG files rendered through `<use h
 Install the consumer packages:
 
 ```bash
-yarn add @design-assets/core @design-assets/react
+yarn add @petrvocelka/design-assets-core @petrvocelka/design-assets-react
 ```
 
 Copy generated assets into your app's public directory:
@@ -33,7 +43,7 @@ yarn design-assets copy ./public/design-assets
 Render assets with the React adapter:
 
 ```tsx
-import { DesignAssetsProvider, Icon, Flag } from '@design-assets/react';
+import { DesignAssetsProvider, Icon, Flag } from '@petrvocelka/design-assets-react';
 
 export function App() {
   return (
@@ -59,21 +69,21 @@ The runtime packages do not depend on Tailwind or ship default sizes. Add sizing
 
 | Package | Purpose |
 | --- | --- |
-| `@design-assets/core` | Generated manifest, names, version, SVG files, href helpers, and `design-assets copy` CLI. |
-| `@design-assets/react` | React external-file components plus `@design-assets/react/inline` for above-the-fold assets. |
-| `@design-assets/angular` | Angular standalone external-file components. |
-| `@design-assets/web-components` | Framework-agnostic custom elements and `@design-assets/web-components/register`. |
+| `@petrvocelka/design-assets-core` | Generated manifest, names, version, SVG files, href helpers, and `design-assets copy` CLI. |
+| `@petrvocelka/design-assets-react` | React external-file components plus `@petrvocelka/design-assets-react/inline` for above-the-fold assets. |
+| `@petrvocelka/design-assets-angular` | Angular standalone external-file components. |
+| `@petrvocelka/design-assets-web-components` | Framework-agnostic custom elements and `@petrvocelka/design-assets-web-components/register`. |
 
 `packages/tailwind-preset` is a private docs/demo helper in this case study. It is not required by the runtime packages and should not be treated as part of the consumer contract.
 
-The stable v1 asset contract is intentionally small: `icons`, `brand`, and `flags`. `pictograms` and `illustrations` remain in the repository as demo custom groups that show how colored SVG groups, CSS-variable themes, and Storybook documentation could work in a company-specific extension.
+The target public asset contract is intentionally small: `icons`, `brand`, and `flags`. `pictograms` and `illustrations` remain in the repository as demo custom groups that show how colored SVG groups, CSS-variable themes, and Storybook documentation could work in a company-specific extension.
 
 Stable public imports:
 
 ```tsx
-import { Icon } from '@design-assets/react';
-import { SquareIcon } from '@design-assets/react/inline';
-import { manifest } from '@design-assets/core/manifest';
+import { Icon } from '@petrvocelka/design-assets-react';
+import { SquareIcon } from '@petrvocelka/design-assets-react/inline';
+import { manifest } from '@petrvocelka/design-assets-core/manifest';
 ```
 
 Do not import raw internal source files from `src/` or unversioned asset paths. Use package exports so the manifest, versioning, accessibility rules, and generated `viewBox` data stay in sync.
@@ -93,7 +103,7 @@ The generated wrapper has no built-in `width` or `height`; the `class` above is 
 Inline mode is available for critical above-the-fold assets:
 
 ```tsx
-import { LogoMark } from '@design-assets/react/inline';
+import { LogoMark } from '@petrvocelka/design-assets-react/inline';
 
 <LogoMark ariaLabel="Design Assets" className="h-6 w-auto" />;
 ```
@@ -122,7 +132,7 @@ yarn design-assets copy ./public/design-assets --categories icons,brand
 Web Components can also register only selected element categories:
 
 ```ts
-import { defineDesignAssetsElements } from '@design-assets/web-components/register';
+import { defineDesignAssetsElements } from '@petrvocelka/design-assets-web-components/register';
 
 defineDesignAssetsElements({ categories: ['icons', 'brand'] });
 ```
@@ -165,18 +175,16 @@ Use Changesets and GitHub Packages for versioned releases:
 
 ```bash
 yarn changeset
-yarn changeset version
-yarn generate
+yarn version-packages
 yarn validate
-yarn lint
-yarn typecheck
-yarn test
-yarn test:e2e
-yarn build
-yarn changeset publish
+yarn typecheck --concurrency=1
+yarn test --concurrency=1
+yarn test:e2e --concurrency=1
+yarn build --concurrency=1
+yarn release
 ```
 
-See [`docs/publishing/github-packages.md`](docs/publishing/github-packages.md) for `.npmrc`, token, and GitHub Actions guidance.
+`yarn version-packages` runs `changeset version` and then `yarn generate`, because generated asset URLs use the package `ASSETS_VERSION`. See [`docs/publishing/github-packages.md`](docs/publishing/github-packages.md) for registry scope, token, and GitHub Actions guidance.
 
 ## Storybook
 

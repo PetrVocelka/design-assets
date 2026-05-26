@@ -22,7 +22,9 @@ describe('brand source assets', () => {
     await Promise.all(
       svgFiles.map(async (file) => {
         const asset = await readFile(join(BRAND_SOURCE_DIR, file), 'utf8');
+        expect(asset).toContain('viewBox="0 0 64 64"');
         expect(asset).not.toMatch(/<text[\s>]/i);
+        expect(asset).not.toMatch(/<(?:mask|clipPath|filter)[\s>]/i);
       }),
     );
   });

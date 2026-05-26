@@ -1,6 +1,6 @@
 import { createContext, useContext, type ReactNode } from 'react';
-import type { AssetHrefResolver } from '@design-assets/core/href';
-import { ASSETS_VERSION } from '@design-assets/core/version';
+import type { AssetHrefResolver } from '@petrvocelka/design-assets-core/href';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core/version';
 
 export interface DesignAssetsContextValue {
   baseUrl: string;

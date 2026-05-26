@@ -17,7 +17,7 @@ This filters both the copied SVG folders and `manifest.json`.
 ## Register only selected Web Components
 
 ```ts
-import { configureDesignAssets, defineDesignAssetsElements } from '@design-assets/web-components/register';
+import { configureDesignAssets, defineDesignAssetsElements } from '@petrvocelka/design-assets-web-components/register';
 
 configureDesignAssets({ baseUrl: '/design-assets' });
 defineDesignAssetsElements({ categories: ['icons', 'brand'] });
@@ -28,11 +28,11 @@ defineDesignAssetsElements({ categories: ['icons', 'brand'] });
 React and Angular consumers should import only the adapters they use:
 
 ```tsx
-import { DesignAssetImg, DesignAssetUse, Icon, BrandAsset } from '@design-assets/react';
+import { DesignAssetImg, DesignAssetUse, Icon, BrandAsset } from '@petrvocelka/design-assets-react';
 ```
 
 ```ts
-import { DesignAssetImgComponent, DesignAssetUseComponent, IconComponent, BrandAssetComponent } from '@design-assets/angular';
+import { DesignAssetImgComponent, DesignAssetUseComponent, IconComponent, BrandAssetComponent } from '@petrvocelka/design-assets-angular';
 ```
 
 Bundlers can tree-shake unused adapter code. Public SVG availability is still controlled by the copied categories, and the same copied SVG can be rendered as external `<use>`, `<img>`, or a generated inline component.

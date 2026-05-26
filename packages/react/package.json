@@ -1,5 +1,5 @@
 {
-  "name": "@design-assets/react",
+  "name": "@petrvocelka/design-assets-react",
   "version": "0.1.0",
   "description": "React renderers for typed SVG design assets with external use/img modes and critical inline components.",
   "license": "MIT",
@@ -26,11 +26,11 @@
     "lint": "eslint src --ext .ts,.tsx"
   },
   "peerDependencies": {
-    "@design-assets/core": "0.1.0",
+    "@petrvocelka/design-assets-core": ">=0.1.0 <1",
     "react": ">=18"
   },
   "dependencies": {
-    "@design-assets/core": "0.1.0"
+    "@petrvocelka/design-assets-core": "0.1.0"
   },
   "devDependencies": {
     "@design-assets/eslint-config": "workspace:*",

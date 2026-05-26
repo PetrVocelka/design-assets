@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "predev": "yarn copy:assets",
-    "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/demo-vanilla/public/design-assets",
+    "copy:assets": "yarn workspace @petrvocelka/design-assets-core generate && yarn workspace @petrvocelka/design-assets-core design-assets copy ../../apps/demo-vanilla/public/design-assets",
     "dev": "yarn copy:assets && vite",
     "prebuild": "yarn copy:assets",
     "build": "vite build",
@@ -14,8 +14,8 @@
     "lint": "eslint src --ext .ts"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*",
-    "@design-assets/web-components": "workspace:*"
+    "@petrvocelka/design-assets-core": "workspace:*",
+    "@petrvocelka/design-assets-web-components": "workspace:*"
   },
   "devDependencies": {
     "@design-assets/eslint-config": "workspace:*",

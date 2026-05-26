@@ -1,6 +1,6 @@
 /**
  * Example icon size scale for docs / Storybook controls only.
- * Not part of @design-assets/core — teams define their own sizing rules.
+ * Not part of @petrvocelka/design-assets-core — teams define their own sizing rules.
  *
  * Uses explicit h-* w-* + shrink-0 + inline-block (reliable in Tailwind JIT;
  * dynamic size-* strings can fail, especially xs).

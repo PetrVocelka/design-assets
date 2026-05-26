@@ -8,5 +8,5 @@ export default defineConfig({
   format: ['esm'],
   dts: true,
   clean: true,
-  external: ['@design-assets/core', 'lit'],
+  external: ['@petrvocelka/design-assets-core', 'lit'],
 });

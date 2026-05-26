@@ -1,4 +1,6 @@
 import {
+  DaAssetImgElement,
+  DaAssetUseElement,
   DaBrandAssetElement,
   DaFlagElement,
   DaIconElement,
@@ -10,6 +12,7 @@ export { configureDesignAssets, getDesignAssetsConfig } from './config.js';
 export type { DesignAssetsConfig } from './config.js';
 
 export type RegisterableAssetCategory =
+  | 'primitives'
   | 'icons'
   | 'pictograms'
   | 'illustrations'
@@ -25,6 +28,8 @@ const ELEMENT_REGISTRY: Array<{
   tag: string;
   ElementClass: CustomElementConstructor;
 }> = [
+  { category: 'primitives', tag: 'da-asset-use', ElementClass: DaAssetUseElement },
+  { category: 'primitives', tag: 'da-asset-img', ElementClass: DaAssetImgElement },
   { category: 'icons', tag: 'da-icon', ElementClass: DaIconElement },
   { category: 'pictograms', tag: 'da-pictogram', ElementClass: DaPictogramElement },
   {
@@ -53,6 +58,8 @@ export function defineDesignAssetsElements(
 }
 
 export {
+  DaAssetImgElement,
+  DaAssetUseElement,
   DaBrandAssetElement,
   DaFlagElement,
   DaIconElement,

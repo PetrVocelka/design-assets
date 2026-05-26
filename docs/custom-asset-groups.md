@@ -1,10 +1,10 @@
 # Custom asset groups
 
-Custom asset groups are intentionally future work for the public package contract. The v1 built-in contract is `icons`, `brand`, and `flags`; `pictograms` and `illustrations` remain in this case study as demo custom groups so the repository can show colored SVG theming and Storybook composition without making every consumer adopt those categories.
+Custom asset groups are intentionally future work for the public package contract. The target built-in contract is `icons`, `brand`, and `flags`; `pictograms` and `illustrations` remain in this case study as demo custom groups so the repository can show colored SVG theming and Storybook composition without making every consumer adopt those categories.
 
 ## Why not implement custom groups in the first slice
 
-The stable v1 categories are known at package build time:
+The built-in categories are known at package build time:
 
 ```txt
 icons
@@ -15,8 +15,8 @@ flags
 That lets the package generate stable exports like:
 
 ```ts
-import { Icon, Flag } from '@design-assets/react';
-import type { IconName, CountryCode } from '@design-assets/core';
+import { Icon, Flag } from '@petrvocelka/design-assets-react';
+import type { IconName, CountryCode } from '@petrvocelka/design-assets-core';
 ```
 
 The demo custom groups are also generated in this repository:
@@ -33,7 +33,7 @@ They are examples of what a company-specific asset group could look like: colore
 A future custom group config could look like this:
 
 ```ts
-import { defineDesignAssetsConfig } from '@design-assets/core/config';
+import { defineDesignAssetsConfig } from '@petrvocelka/design-assets-core/config';
 
 export default defineDesignAssetsConfig({
   groups: {

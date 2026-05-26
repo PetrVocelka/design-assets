@@ -5,7 +5,7 @@ import {
   inject,
   input,
 } from '@angular/core';
-import type { BrandAssetName } from '@design-assets/core/names';
+import type { BrandAssetName } from '@petrvocelka/design-assets-core/names';
 
 import { resolveA11yInputs } from './a11y';
 import {

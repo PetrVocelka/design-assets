@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Illustration } from '@design-assets/react';
+import { Illustration } from '@petrvocelka/design-assets-react';
 import { createComponentStories, getIllustrationHref } from './create-component-stories';
 import { ILLUSTRATION_SIZE_PRESETS, manifestNames } from './story-helpers';
 import { ThemedAssetExample } from './themed-asset-example';

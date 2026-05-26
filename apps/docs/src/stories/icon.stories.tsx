@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon } from '@design-assets/react';
+import { Icon } from '@petrvocelka/design-assets-react';
 import { ICON_SIZE_PRESETS } from '@design-assets/tailwind-preset/icon-sizes';
 import { createComponentStories, getIconHref } from './create-component-stories';
 import { manifestNames } from './story-helpers';
@@ -35,7 +35,7 @@ const { metaFields, React: ReactExample, HTML: HTMLExample, Angular: AngularExam
   defaultDecorative: true,
   defaultAriaLabel: 'Example shape',
   angularComponent: 'IconComponent',
-  angularSnippet: `import { IconComponent } from '@design-assets/angular';
+  angularSnippet: `import { IconComponent } from '@petrvocelka/design-assets-angular';
 
 @Component({
   imports: [IconComponent],

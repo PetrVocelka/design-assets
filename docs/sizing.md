@@ -33,7 +33,7 @@ That keeps the package portable across Tailwind, CSS Modules, plain CSS, Angular
 ## Wrapper component example
 
 ```tsx
-import { Icon, type IconProps } from '@design-assets/react';
+import { Icon, type IconProps } from '@petrvocelka/design-assets-react';
 
 const ICON_SIZE_CLASS = {
   sm: 'size-4',

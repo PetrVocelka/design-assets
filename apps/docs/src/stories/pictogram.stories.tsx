@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Pictogram } from '@design-assets/react';
+import { Pictogram } from '@petrvocelka/design-assets-react';
 import { createComponentStories, getPictogramHref } from './create-component-stories';
 import { manifestNames, PICTOGRAM_SIZE_PRESETS } from './story-helpers';
 import { ThemedAssetExample } from './themed-asset-example';

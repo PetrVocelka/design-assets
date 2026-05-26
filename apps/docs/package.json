@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "predev": "yarn copy:assets",
-    "copy:assets": "yarn workspace @design-assets/core generate && yarn workspace @design-assets/core design-assets copy ../../apps/docs/public/design-assets",
+    "copy:assets": "yarn workspace @petrvocelka/design-assets-core generate && yarn workspace @petrvocelka/design-assets-core design-assets copy ../../apps/docs/public/design-assets",
     "dev": "yarn copy:assets && storybook dev -p 6006",
     "build": "yarn copy:assets && storybook build",
     "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
-    "@design-assets/core": "workspace:*",
-    "@design-assets/react": "workspace:*",
-    "@design-assets/web-components": "workspace:*",
+    "@petrvocelka/design-assets-core": "workspace:*",
+    "@petrvocelka/design-assets-react": "workspace:*",
+    "@petrvocelka/design-assets-web-components": "workspace:*",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

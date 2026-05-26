@@ -1,6 +1,6 @@
 import { html, LitElement, type TemplateResult } from 'lit';
 import { property } from 'lit/decorators.js';
-import type { AssetHrefResolver } from '@design-assets/core';
+import type { AssetHrefResolver } from '@petrvocelka/design-assets-core';
 
 import { readA11yFromElement, resolveAccessibility } from './a11y.js';
 import { getDesignAssetsConfig, readBaseUrl, readVersionTag } from './config.js';

@@ -14,7 +14,7 @@ Design Assets generates typed SVG assets, framework renderers, versioned externa
 | `use` | Monochrome UI icons that need `currentColor`, hover states, and theme tokens. | Small wrapper markup with browser-cached SVG files and versioned URLs. |
 | `img` | Flags, brand images, and self-contained colored assets. | Native image behavior (`alt`, `loading`, `decoding`) when page CSS does not need to style SVG internals. |
 
-Install `@design-assets/core` and `@design-assets/react`, then copy assets into your app's `public/` directory:
+Install `@petrvocelka/design-assets-core` and `@petrvocelka/design-assets-react`, then copy assets into your app's `public/` directory:
 
 ```bash
 yarn design-assets copy ./public/design-assets
@@ -23,7 +23,7 @@ yarn design-assets copy ./public/design-assets
 Wrap your app and choose the render mode per usage:
 
 ```tsx
-import { DesignAssetImg, DesignAssetUse, DesignAssetsProvider, Icon } from '@design-assets/react';
+import { DesignAssetImg, DesignAssetUse, DesignAssetsProvider, Icon } from '@petrvocelka/design-assets-react';
 
 <DesignAssetsProvider baseUrl="/design-assets">
   {/* Convenience icon wrapper: external SVG <use>. */}
@@ -47,7 +47,7 @@ Adapters do not enforce a rendered size. Use your product CSS, Tailwind utilitie
 For ATF assets such as the logo mark or primary navigation icons, use the inline entrypoint:
 
 ```tsx
-import { LogoMark } from '@design-assets/react/inline';
+import { LogoMark } from '@petrvocelka/design-assets-react/inline';
 ```
 
 Angular inline components follow the asset identity, not the delivery mechanism:

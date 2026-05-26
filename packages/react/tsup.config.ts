@@ -8,7 +8,7 @@ export default defineConfig({
   format: ['esm'],
   dts: true,
   clean: true,
-  external: ['react', '@design-assets/core'],
+  external: ['react', '@petrvocelka/design-assets-core'],
   esbuildOptions(options) {
     options.jsx = 'automatic';
   },

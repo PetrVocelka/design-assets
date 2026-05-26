@@ -1,7 +1,7 @@
 import { InjectionToken, type Provider } from '@angular/core';
-import { resolveAssetHref, type AssetHrefResolver } from '@design-assets/core/href';
-import type { AssetCategory } from '@design-assets/core/names';
-import { ASSETS_VERSION } from '@design-assets/core/version';
+import { resolveAssetHref, type AssetHrefResolver } from '@petrvocelka/design-assets-core/href';
+import type { AssetCategory } from '@petrvocelka/design-assets-core/names';
+import { ASSETS_VERSION } from '@petrvocelka/design-assets-core/version';
 
 export interface DesignAssetsConfig {
   baseUrl: string;

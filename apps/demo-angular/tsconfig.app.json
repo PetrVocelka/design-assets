@@ -7,10 +7,10 @@
     "declarationMap": false,
     "types": [],
     "paths": {
-      "@design-assets/angular": ["../../packages/angular/src/index.ts"],
-      "@design-assets/angular/*": ["../../packages/angular/src/*"],
-      "@design-assets/core": ["../../packages/core/src/index.ts"],
-      "@design-assets/core/*": ["../../packages/core/*"]
+      "@petrvocelka/design-assets-angular": ["../../packages/angular/src/index.ts"],
+      "@petrvocelka/design-assets-angular/*": ["../../packages/angular/src/*"],
+      "@petrvocelka/design-assets-core": ["../../packages/core/src/index.ts"],
+      "@petrvocelka/design-assets-core/*": ["../../packages/core/*"]
     }
   },
   "files": ["src/main.ts"],

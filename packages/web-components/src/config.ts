@@ -1,4 +1,4 @@
-import { ASSETS_VERSION, type AssetHrefResolver } from '@design-assets/core';
+import { ASSETS_VERSION, type AssetHrefResolver } from '@petrvocelka/design-assets-core';
 
 export interface DesignAssetsConfig {
   baseUrl: string;

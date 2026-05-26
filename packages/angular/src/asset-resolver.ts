@@ -2,8 +2,8 @@ import {
   buildAssetHref,
   buildAssetUrl,
   resolveAssetHref,
-} from '@design-assets/core/href';
-import type { AssetCategory } from '@design-assets/core/names';
+} from '@petrvocelka/design-assets-core/href';
+import type { AssetCategory } from '@petrvocelka/design-assets-core/names';
 
 import {
   resolveVersionTag,

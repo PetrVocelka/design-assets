@@ -4,6 +4,7 @@ dist/
 *.tsbuildinfo
 .DS_Store
 storybook-static/
+pages-dist/
 apps/demo-react/public/design-assets/**/*.svg
 apps/demo-react/public/design-assets/manifest.json
 apps/demo-react/public/design-assets/version.json

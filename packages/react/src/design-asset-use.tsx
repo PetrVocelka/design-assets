@@ -1,4 +1,4 @@
-import type { AssetCategory } from '@design-assets/core/names';
+import type { AssetCategory } from '@petrvocelka/design-assets-core/names';
 
 import { ExternalSvg, type AccessibleProps } from './external-svg.js';
 import {

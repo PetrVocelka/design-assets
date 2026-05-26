@@ -5,7 +5,7 @@ import {
   inject,
   input,
 } from '@angular/core';
-import type { IconName } from '@design-assets/core/names';
+import type { IconName } from '@petrvocelka/design-assets-core/names';
 
 import { resolveA11yInputs } from './a11y';
 import {

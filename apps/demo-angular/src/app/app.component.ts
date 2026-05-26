@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IconComponent, PictogramComponent } from '@design-assets/angular';
+import { IconComponent, PictogramComponent } from '@petrvocelka/design-assets-angular';
 
 @Component({
   selector: 'app-root',
