@@ -2598,7 +2598,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@petrvocelka/design-assets-core@npm:0.1.0, @petrvocelka/design-assets-core@workspace:*, @petrvocelka/design-assets-core@workspace:packages/core":
+"@petrvocelka/design-assets-core@npm:0.2.0, @petrvocelka/design-assets-core@workspace:*, @petrvocelka/design-assets-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@petrvocelka/design-assets-core@workspace:packages/core"
   dependencies:
@@ -2623,7 +2623,7 @@ __metadata:
   dependencies:
     "@design-assets/eslint-config": "workspace:*"
     "@design-assets/typescript-config": "workspace:*"
-    "@petrvocelka/design-assets-core": "npm:0.1.0"
+    "@petrvocelka/design-assets-core": "npm:0.2.0"
     "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.3.0"
@@ -2649,7 +2649,7 @@ __metadata:
   dependencies:
     "@design-assets/eslint-config": "workspace:*"
     "@design-assets/typescript-config": "workspace:*"
-    "@petrvocelka/design-assets-core": "npm:0.1.0"
+    "@petrvocelka/design-assets-core": "npm:0.2.0"
     eslint: "npm:^9.28.0"
     jsdom: "npm:^26.1.0"
     lit: "npm:^3.3.0"
