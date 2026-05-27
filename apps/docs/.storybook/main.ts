@@ -5,7 +5,6 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: ['@storybook/addon-essentials', '@storybook/addon-docs'],
   framework: '@storybook/react-vite',
-  staticDirs: ['../public'],
   viteFinal: async (config) => {
     config.resolve ??= {};
     config.resolve.alias = {
